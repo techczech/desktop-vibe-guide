@@ -4,10 +4,10 @@
 
 This entire website was created by **[Dominik Lukes](https://dominiklukes.net)** entirely by prompting an AI agent in Antigravity on Windows.
 
-No traditional coding was required. The process involved:
+No traditional coding or copyediting was required. The process involved:
 - Describing what was needed in plain English
 - Occasional intervention when the agent got stuck
-- A few minor direct edits (faster than writing a prompt for small tweaks)
+- A few minor direct edits to text (faster than writing a prompt for small tweaks)
 
 The AI models sometimes made mistakes—including hallucinating URLs that didn't exist. But reminding them to search online or try a different approach always worked.
 
