@@ -5,6 +5,7 @@ import { BookOpen, Settings, Zap, Terminal, Github } from 'lucide-react';
 const docs = [
   { id: 'readme', title: 'Welcome', icon: <BookOpen size={20} />, path: '/docs/readme.md' },
   { id: 'setup', title: 'Getting Started', icon: <Settings size={20} />, path: '/docs/setup.md' },
+  { id: 'how-websites', title: 'How Websites Work', icon: <Terminal size={20} />, path: '/docs/how-websites-work.md' },
   { id: 'ai-studio', title: 'From AI Studio', icon: <Zap size={20} />, path: '/docs/from-ai-studio.md' },
   { id: 'markdown', title: 'Markdown for Writers', icon: <BookOpen size={20} />, path: '/docs/markdown-for-writers.md' },
   { id: 'git-github', title: 'Git & GitHub Basics', icon: <Github size={20} />, path: '/docs/git-github-basics.md' },
