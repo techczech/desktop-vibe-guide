@@ -1,6 +1,6 @@
 # Getting Started with AI-Powered Coding on Windows 🚀
 
-Welcome! This guide will take you from zero to building and publishing your own websites—all by having a conversation with an AI.
+Welcome! This guide will take you from zero to building and publishing your own websites and software—all by having a conversation with an AI.
 
 No coding experience required. If you can chat, you can build.
 
@@ -12,14 +12,27 @@ No coding experience required. If you can chat, you can build.
 
 Unlike simple code assistants that just suggest code, Antigravity is an **agent** that can take actions on your behalf:
 
-- Write and edit code files
+- Write and edit any text files (not just code—documents, notes, Markdown files)
 - Run terminal commands
+- Start and manage local servers (so you can preview your work)
 - Open websites and interact with them
 - Install software and tools
 - Deploy websites to the internet
 - Create and manage GitHub repositories
 
 You talk to it in plain English, and it does the work.
+
+### It's Also a Great Text Editor
+
+Antigravity isn't just for code. It can edit any text file—documents, notes, research papers. When you write in **Markdown** (a simple formatting language), your text can easily be converted into websites, PDFs, or other formats. This entire documentation site was written in Markdown files that the agent then turned into a website.
+
+### Alternatives to Antigravity
+
+There are other AI coding tools, but they typically require payment:
+- **Cursor**: A paid AI-powered code editor
+- **VS Code + Claude Code or Codex plugins**: Require subscriptions
+
+Antigravity is free, which makes it a great starting point for beginners.
 
 ---
 
@@ -50,10 +63,34 @@ The agent will start working. You'll see it creating files, writing code, and so
 
 **What can you ask it to do?**
 - "Make a portfolio website for my photography"
+- "Write a Python script that organizes my photos by date"
 - "Install Git for me"
 - "Create a GitHub repository and push my code"
 - "Deploy this website to Cloudflare"
 - "Search online for how to fix this error"
+
+---
+
+## Not Just Websites: Local Servers and Software
+
+Antigravity can build more than websites. It can create:
+- Command-line tools
+- Data processing scripts
+- Automation utilities
+- Desktop applications
+
+### What is "localhost"?
+
+When you're building software, you often need to run it on your own computer first to test it. This is called running it **locally**. Your computer becomes a temporary server.
+
+When you hear "localhost" or see `http://localhost:5173`, that's your computer serving a website to itself. Only you can see it—it's not on the internet yet.
+
+The agent can:
+- Start a local server for you automatically
+- Open your browser to show the preview
+- Restart the server when you make changes
+
+Just ask: *"Start the development server"* and it will handle the rest.
 
 ---
 
@@ -128,6 +165,8 @@ This installs a Linux environment inside Windows. The agent will guide you if yo
 - If the agent is stuck, say "search online for a solution"
 
 The agent is patient. It will keep trying. You are the director; the agent executes.
+
+**Remember:** You are the Director. The AI is the Cameraman. If the shot is blurry, you don't grab the camera—you just tell them to focus.
 
 If you can chat, you can build.
 
