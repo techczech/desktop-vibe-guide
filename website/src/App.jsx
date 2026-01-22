@@ -8,8 +8,8 @@ const allDocs = [
   { id: 'workflow', title: 'Working with Agents', icon: <Zap size={20} />, path: '/docs/workflow.md', category: 'key' },
   { id: 'how-websites', title: 'How Webapps Run on Your Computer', icon: <Code size={20} />, path: '/docs/how-websites-work.md', category: 'useful' },
   { id: 'ai-studio', title: 'Migrating from Google AI Studio', icon: <Zap size={20} />, path: '/docs/from-ai-studio.md', category: 'useful' },
-  { id: 'markdown', title: 'Markdown for Writers', icon: <BookOpen size={20} />, path: '/docs/markdown-for-writers.md', category: 'useful' },
   { id: 'git-github', title: 'Git & GitHub', icon: <Github size={20} />, path: '/docs/git-github-basics.md', category: 'useful' },
+  { id: 'markdown', title: 'Markdown for Writers', icon: <BookOpen size={20} />, path: '/docs/markdown-for-writers.md', category: 'useful' },
   { id: 'about', title: 'About', icon: <User size={20} />, path: '/docs/about.md', category: 'other' },
 ];
 
