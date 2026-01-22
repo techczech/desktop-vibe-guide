@@ -1,53 +1,64 @@
 # AGENTS.md
 
-This is a guide and website documenting how to use AI coding agents on Windows for non-developers.
+A guide for AI coding agents working on this project.
 
 ## Project Overview
 - **Purpose**: Help non-technical users build and deploy websites using AI agents on Windows
-- **Target Audience**: Non-developers, researchers, data scientists who want to use AI for coding
-- **Tech Stack**: Vite + React, Markdown documentation, Cloudflare Pages deployment
+- **Target Audience**: Non-developers, researchers, data scientists
+- **Philosophy**: "If you can chat, you can build"
+- **Tech Stack**: Vite + React, Markdown documentation, Cloudflare Pages
 
-## Build and Test Commands
-```powershell
-# Website development
+## Build Commands
+```bash
 cd website
 npm install          # Install dependencies
-npm run dev         # Start dev server (http://localhost:5173)
-npm run build       # Build for production (output: dist/)
-
-# Documentation is in /docs and copied to website/public/docs
+npm run dev          # Start dev server (http://localhost:5173)
+npm run build        # Build for production (output: dist/)
 ```
 
 ## Deployment
-- **WSL Required for Wrangler on ARM Windows**: Use `wsl -e bash -c "cd ~/vibe-deploy && npx wrangler pages deploy ./dist"`
-- **Repository**: https://github.com/techczech/windows-vibe-guide
+- Cloudflare Pages via Wrangler
+- On ARM Windows, Wrangler requires WSL
+- Production deployment: `wsl -e bash -c "cd ~/vibe-deploy && cp -r /mnt/c/.../website/dist . && npx wrangler pages deploy ./dist"`
+
+## Repository
+- GitHub: https://github.com/techczech/windows-vibe-guide
+
+## Documentation Structure
+- `/docs/` - Markdown source files
+- `/website/public/docs/` - Copies for web (keep in sync)
+- `/website/src/App.jsx` - Navigation config
 
 ## Code Style
-- Use vanilla CSS (no Tailwind unless requested)
-- Premium dark-mode design with glassmorphism
-- Icons from lucide-react
-- Markdown files should be accessible and jargon-free for non-developers
+- Vanilla CSS (dark theme, glassmorphism)
+- Icons: lucide-react
+- Documentation: conversational, encouraging, no jargon
 
-## Documentation Guidelines
-- **Tone**: Conversational, encouraging, non-condescending
-- **Audience**: People with zero coding experience
-- **Philosophy**: "If you can chat, you can build"
-- **Key Principle**: Emphasize the partnership between human (director) and AI (executor)
+## Adding New Documentation
+1. Create .md in `/docs`
+2. Copy to `/website/public/docs/`
+3. Add to `docs` array in `App.jsx`
+4. Rebuild and redeploy
 
-## Common Pitfalls on Windows
-1. **File Locks (EPERM)**: npm install often fails due to Windows Defender. Solution: WSL or retry with delays
-2. **ARM64 Support**: Wrangler doesn't work natively on Windows ARM. Must use WSL.
-3. **Path Issues**: Always use forward slashes in code, backslashes in PowerShell commands
+## Common Windows Issues
+1. **EPERM/File Locks**: Retry or use WSL
+2. **ARM64**: Must use WSL for Wrangler
+3. **Path issues**: Forward slashes in code, backslashes in PowerShell
 
-## Testing Instructions
-- Verify all documentation renders correctly in the website (`npm run dev`)
-- Test that all navigation links work
-- Ensure GitHub repo link is correct
-- Build should complete without errors
+## Agent Behavior Guidelines
+- Always explain what you're doing in plain language
+- If a command fails, try alternatives or search online
+- Remind users they can ask you to install tools for them
+- Guide users through terminal steps when necessary
+- Be patient with non-technical users
 
-## When Adding New Documentation
-1. Create .md file in `/docs`
-2. Copy to `website/public/docs/`
-3. Add entry to `docs` array in `website/src/App.jsx`
-4. Import any new icons from lucide-react
-5. Rebuild and redeploy
+---
+
+## For Users
+
+You can download this file and place it in your project folder. It helps AI agents understand your project and work more effectively.
+
+**To use it:**
+1. Save this file as `AGENTS.md` in your project's root folder.
+2. Start chatting with the agent—it will read this file automatically.
+3. Customize it with your own project's build commands and preferences.
