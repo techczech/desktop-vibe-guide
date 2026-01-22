@@ -19,7 +19,34 @@ npm run build        # Build for production (output: dist/)
 ## Deployment
 - Cloudflare Pages via Wrangler
 - On ARM Windows, Wrangler requires WSL
-- Production deployment: `wsl -e bash -c "cd ~/vibe-deploy && cp -r /mnt/c/.../website/dist . && npx wrangler pages deploy ./dist"`
+- **CRITICAL**: To avoid file system lock issues, you MUST copy the build output to the Linux filesystem before deploying.
+
+### Windows ARM / WSL Deployment Workflow
+1. Build the site in Windows as usual (`npm run build`)
+2. Switch to WSL (`wsl`)
+3. Copy the `dist` folder to a purely Linux path (e.g., `~/vibe-deploy`)
+4. Deploy from that Linux path
+
+```bash
+# Example sequence in WSL:
+# 1. Setup environment (one-time)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+source ~/.bashrc
+nvm install 22
+
+# 2. Prepare deployment folder
+mkdir -p ~/vibe-deploy
+# Remove old build if exists
+rm -rf ~/vibe-deploy/dist 
+
+# 3. Copy build from Windows (replace path as needed)
+cp -r /mnt/c/Users/mast5819/gitrepositories/windowsvibecodingsetup/website/dist ~/vibe-deploy/
+
+# 4. Deploy
+cd ~/vibe-deploy
+npm install -D wrangler # Install local wrangler
+npx wrangler pages deploy dist --project-name windows-vibe-guide
+```
 
 ## Repository
 - GitHub: https://github.com/techczech/windows-vibe-guide
