@@ -1,4 +1,4 @@
-# The Non-Developer's Guide to AI Web Building on Windows 🤖✨
+# The Non-Developer's Guide to Building Web Applications with AI on Windows 🤖✨
 
 **Welcome!** This guide is designed for anyone who wants to build, publish, and share websites on Windows using AI, *without* needing to understand complex code or terminal commands.
 
