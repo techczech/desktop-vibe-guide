@@ -25,6 +25,7 @@ This is what we use for this documentation site.
 - **Bandwidth**: Unlimited
 - **Great for**: Static sites, React apps, documentation
 - **Why it wins**: You don't have to worry about a "viral bill." If your site gets popular, Cloudflare won't charge you for the traffic.
+- **Domains**: Gives you a free `your-project.pages.dev` URL. You can also buy a custom domain (like `yourname.com`) directly through Cloudflare or link one you already own.
 
 ### 2. Vercel
 Created by the team behind Next.js.
@@ -32,6 +33,7 @@ Created by the team behind Next.js.
 - **Bandwidth**: 100GB / month limit
 - **Great for**: Next.js applications, complex dynamic sites
 - **Why it's great**: Incredible user experience. It detects your framework and sets everything up automatically.
+- **Domains**: Gives you a free `your-project.vercel.app` URL. Like Cloudflare, you can buy distinct domains or connect existing ones easily.
 
 ---
 
