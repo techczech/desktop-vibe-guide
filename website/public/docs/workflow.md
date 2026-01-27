@@ -1,6 +1,6 @@
-# Working with AI Agents: Best Practices 🚀
+# High-Speed Productivity with Antigravity 🚀
 
-This guide covers how to get the best results when working with AI coding agents like Antigravity.
+This guide covers how to achieve maximum productivity and "vibe coding" speed when working with Antigravity.
 
 ---
 
@@ -48,11 +48,13 @@ If something isn't right:
 ### The Agent Gets Stuck
 Say: *"Try a different approach"* or *"Search online for a solution"*
 
-### Commands Fail on Windows
-Windows often has permission issues. Common solutions:
-- Close other programs using the files
-- Run the command in your own terminal
-- Use WSL for deployment (especially on ARM devices)
+### Commands Fail or Get Blocked
+Occasionally, you might hit environment-specific blocks (file locks on Windows, permission issues on Mac). 
+
+**Solutions:**
+- **Mac:** If the agent says "permission denied," ask it to explain or check if it needs help with a command.
+- **Windows:** Close other programs using the files (like a running server) before making major changes.
+- **General:** If a tool isn't working natively, the agent might suggest a different environment (like WSL on Windows or Homebrew on Mac).
 
 ### The Agent Makes Mistakes
 It happens. AI models sometimes:
@@ -110,7 +112,7 @@ The agent will run `npm run dev` or equivalent and tell you the localhost URL.
 ### Deploying
 > *"Deploy this to Cloudflare Pages"*
 
-On ARM Windows, you may need to use WSL. The agent will guide you.
+The agent will handle the build and deployment process. If it's your first time, it might ask you to run a login command in your terminal to authenticate.
 
 ### Saving to GitHub
 > *"Create a GitHub repository and push this code"*

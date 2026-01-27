@@ -3,10 +3,11 @@
 A guide for AI coding agents working on this project.
 
 ## Project Overview
-- **Purpose**: Help non-technical users build and deploy websites using AI agents on Windows
-- **Target Audience**: Non-developers, researchers, data scientists
-- **Philosophy**: "If you can chat, you can build"
-- **Tech Stack**: Vite + React, Markdown documentation, Cloudflare Pages
+- **Purpose**: A comprehensive guide for high-speed desktop productivity and "vibecoding" using Antigravity.
+- **Target Audience**: Researchers, academics, and anyone wanting to automate their desktop workflow.
+- **Philosophy**: Mastering the machine through AI-led collaboration; if you can chat, you can build.
+- **Scope**: Platform-agnostic (macOS/Windows), covering file management, custom tools, and web development.
+- **Tech Stack**: Vite + React, Markdown, Lucide icons.
 
 ## Build Commands
 ```bash
@@ -49,7 +50,7 @@ npx wrangler pages deploy dist --project-name windows-vibe-guide
 ```
 
 ## Repository
-- GitHub: https://github.com/techczech/windows-vibe-guide
+- GitHub: https://github.com/techczech/desktop-vibe-guide (Migrated from windows-vibe-guide)
 
 ## Documentation Structure
 - `/docs/` - Markdown source files
@@ -77,7 +78,13 @@ npx wrangler pages deploy dist --project-name windows-vibe-guide
 - If a command fails, try alternatives or search online
 - Remind users they can ask you to install tools for them
 - Guide users through terminal steps when necessary
-- Be patient with non-technical users
+## Progress Status & Recent Updates
+- **2026-01-27**: Complete redesign from "Windows Vibe Coding" to "Desktop Vibecoding Productivity Guide".
+- **Added Content**: 
+    - `docs/terminal-basics.md`: Explainer on terminal history, core commands, and CLI productivity.
+    - Updated `docs/setup.md` with **Warp** terminal recommendations for Mac and Windows.
+    - Updated `docs/workflow.md` to focus on general desktop automation.
+- **Current Status**: Redesign complete, verified locally. The old Windows-only site is now archived.
 
 ---
 

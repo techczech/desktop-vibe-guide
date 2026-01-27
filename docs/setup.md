@@ -1,4 +1,4 @@
-# Getting Started with AI-Powered Coding on Windows 🚀
+# Getting Started with AI-Powered Productivity 🚀
 
 Welcome! This guide will take you from zero to building and publishing your own websites and software—all by having a conversation with an AI.
 
@@ -36,19 +36,19 @@ Antigravity is free, which makes it a great starting point for beginners.
 
 ---
 
-## Step 1: Download Antigravity
-
 Go to the official download page:
 
 **[https://antigravity.google/download](https://antigravity.google/download)**
 
-Follow the installation instructions for Windows. Once installed, you'll have access to the Antigravity interface with a chat sidebar where you can give commands to the agent.
+Follow the installation instructions for your operating system (**macOS** or **Windows**). Once installed, you'll have access to the Antigravity interface with a chat sidebar where you can give commands to the agent.
 
 ---
 
 ## Step 2: Create Your First Project
 
-1. Create a new folder somewhere on your computer (e.g., `C:\Users\YourName\my-first-project`).
+1. Create a new folder on your computer.
+   - **Mac/Linux:** `~/gitrepos/my-first-project`
+   - **Windows:** `C:\Users\YourName\my-first-project`
 2. Open this folder in Antigravity.
 3. Now you have a workspace. This is where the agent will create files for you.
 
@@ -98,10 +98,10 @@ Just ask: *"Start the development server"* and it will handle the rest.
 
 The website you're reading right now was made entirely through conversation with an AI agent. Here's the actual workflow:
 
-1. **User:** "Create a documentation website for setting up Windows for AI coding."
+1. **User:** "Create a documentation website for setting up my desktop for AI-powered productivity."
 2. **Agent:** Created a React project, designed a dark-themed interface, wrote all the documentation.
 3. **User:** "Deploy it to Cloudflare."
-4. **Agent:** Hit Windows-specific issues (file locks). Searched online for solutions. Guided the user through using WSL.
+4. **Agent:** Handled the deployment process, including cross-platform tool configuration.
 5. **User:** "Create a GitHub repository."
 6. **Agent:** Installed GitHub CLI, authenticated, created a public repo, pushed the code.
 
@@ -132,26 +132,33 @@ The agent can install most things for you. Just ask. But here's what you might n
 
 Sometimes the agent will ask you to run a command yourself. Here's how:
 
-1. Open **Windows Terminal** (search "Terminal" in Start menu)
-2. Copy the command the agent gives you
-3. Paste it and press **Enter**
+1. **Open your Terminal:**
+   - **Recommended (Both Platforms):** **[Warp](https://www.warp.dev/)** — An AI-powered terminal that makes commands easier to read and write.
+   - **Mac:** Open **Terminal** (via Spotlight/Command+Space) or **iTerm2**.
+   - **Windows:** Open **Windows Terminal** (search "Terminal" in Start menu).
+2. Copy the command the agent gives you.
+3. Paste it and press **Enter**.
 
 This happens for:
-- Installing global tools
-- Final deployment steps
-- Permission issues the agent can't bypass
+- Installing global tools or system dependencies.
+- Final deployment authentication steps.
+- Native permission issues the agent can't bypass.
 
 ---
 
-## Advanced: WSL for ARM Windows
+## Advanced: Environment Tips
 
-If you're on a Surface Pro or ARM-based Windows device, some tools (like Wrangler) don't work natively. The solution:
+### Mac
+If you are on an Apple Silicon (M1/M2/M3) Mac, most tools work natively. If you hit architecture issues, the agent might suggest installing Homebrew or using `arch -x86_64` for specific commands.
+
+### Windows
+If you're on a Surface Pro or ARM-based Windows device, some tools don't work natively. You might need **WSL** (Windows Subsystem for Linux):
 
 ```powershell
 wsl --install
 ```
 
-This installs a Linux environment inside Windows. The agent will guide you if you need this.
+The agent will guide you if you need this setup.
 
 ---
 
