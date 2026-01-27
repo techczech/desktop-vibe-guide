@@ -2,7 +2,7 @@
 
 ## Created by Prompting
 
-This entire website was created by **[Dominik Lukes](https://dominiklukes.net)** entirely by prompting an AI agent in Antigravity on Windows.
+This entire website was created by **[Dominik Lukes](https://dominiklukes.net)** entirely by prompting an AI agent in Antigravity.
 
 No traditional coding or copyediting was required. The process involved:
 - Describing what was needed in plain English
@@ -32,7 +32,7 @@ That's it. One prompt, and the agent created this page.
 
 ## The Workflow
 
-1. **Start with an idea**: "Create a documentation site about Windows AI coding"
+1. **Start with an idea**: "Create a documentation site about desktop AI-powered productivity"
 2. **Describe features**: "Add a guide about Markdown", "Add an About page"
 3. **Fix issues**: "That URL doesn't exist, search for the correct one"
 4. **Deploy**: "Push to GitHub and deploy to Cloudflare"
@@ -47,14 +47,13 @@ The entire site—including the design, the documentation, the deployment config
 - **React + Vite**: The framework powering this site
 - **Cloudflare Pages**: Where this site is hosted
 - **GitHub**: Where the source code lives
-- **WSL**: Used for deployment on ARM Windows
 
 ---
 
 ## Source Code
 
 The complete source code is available on GitHub:
-**[github.com/techczech/windows-vibe-guide](https://github.com/techczech/windows-vibe-guide)**
+**[github.com/techczech/desktop-vibe-guide](https://github.com/techczech/desktop-vibe-guide)**
 
 Feel free to explore, fork, or use it as a starting point for your own projects.
 

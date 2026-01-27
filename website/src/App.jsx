@@ -4,16 +4,17 @@ import { BrowserRouter, Routes, Route, Link, useParams, useNavigate, useLocation
 import { BookOpen, Settings, Zap, Terminal, Github, ArrowLeft, ArrowRight, Code, User, Menu, X, ChevronRight, Cloud, Sparkles, List, ChevronDown, ChevronUp, Search as SearchIcon } from 'lucide-react';
 
 const allDocs = [
-  { id: 'setup', title: 'Getting Started', icon: <Settings size={20} />, path: '/docs/setup.md', category: 'key', description: 'Download Antigravity and start building with AI' },
-  { id: 'non-dev', title: 'Complete Walkthrough', icon: <BookOpen size={20} />, path: '/docs/non-dev-guide.md', category: 'key', description: 'Step-by-step guide for complete beginners' },
-  { id: 'workflow', title: 'Working with Agents', icon: <Zap size={20} />, path: '/docs/workflow.md', category: 'key', description: 'Best practices for AI collaboration' },
+  { id: 'setup', title: 'Getting Started', icon: <Settings size={20} />, path: '/docs/setup.md', category: 'key', description: 'Download Antigravity and start your productivity journey' },
+  { id: 'non-dev', title: 'Beginner Walkthrough', icon: <BookOpen size={20} />, path: '/docs/non-dev-guide.md', category: 'key', description: 'Step-by-step guide for non-technical users' },
+  { id: 'workflow', title: 'Desktop Productivity', icon: <Zap size={20} />, path: '/docs/workflow.md', category: 'key', description: 'High-speed workflows for files, tasks, and code' },
+  { id: 'terminal-basics', title: 'Terminal Basics', icon: <Terminal size={20} />, path: '/docs/terminal-basics.md', category: 'key', description: 'History, core commands, and CLI survival guide' },
   { id: 'how-websites', title: 'How Webapps Run', icon: <Code size={20} />, path: '/docs/how-websites-work.md', category: 'useful', description: 'Understand browsers, servers, and React' },
   { id: 'hosting', title: 'Webapp Hosting', icon: <Cloud size={20} />, path: '/docs/webapp-hosting.md', category: 'useful', description: 'Free hosting guidelines for your webapps' },
   { id: 'ai-features', title: 'Adding AI Features', icon: <Sparkles size={20} />, path: '/docs/adding-ai-features.md', category: 'useful', description: 'Power your apps with Google\'s AI' },
   { id: 'ai-studio', title: 'Migrating from AI Studio', icon: <Zap size={20} />, path: '/docs/from-ai-studio.md', category: 'useful', description: 'Migrate prototypes to local development' },
   { id: 'git-github', title: 'Git & GitHub', icon: <Github size={20} />, path: '/docs/git-github-basics.md', category: 'useful', description: 'Version control and backing up code' },
   { id: 'markdown', title: 'Markdown for Writers', icon: <BookOpen size={20} />, path: '/docs/markdown-for-writers.md', category: 'useful', description: 'Write text better than in Word' },
-  { id: 'about', title: 'About', icon: <User size={20} />, path: '/docs/about.md', category: 'other', description: 'How this website was created' },
+  { id: 'about', title: 'About', icon: <User size={20} />, path: '/docs/about.md', category: 'other', description: 'How this guide was created' },
 ];
 
 const keyDocs = allDocs.filter(d => d.category === 'key');
@@ -49,11 +50,11 @@ function Layout({ children }) {
       <a href="#main-content" className="skip-link">Skip to content</a>
       <header className="header" role="banner">
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <Link to="/" className="logo" style={{ cursor: 'pointer', textDecoration: 'none' }} aria-label="Windows Vibe Coding Setup Home">
+          <Link to="/" className="logo" style={{ cursor: 'pointer', textDecoration: 'none' }} aria-label="Desktop Vibecoding Productivity Guide Home">
             <div className="logo-icon" aria-hidden="true">
               <Terminal size={20} />
             </div>
-            <span className="logo-text">Vibe Coding Guide</span>
+            <span className="logo-text">Desktop Vibecoding Guide</span>
           </Link>
         </div>
         <nav style={{ display: 'flex', alignItems: 'center', gap: '1rem' }} aria-label="Main navigation">
@@ -67,7 +68,7 @@ function Layout({ children }) {
             <span className="search-shortcut" aria-hidden="true">/</span>
           </button>
           <Link to="/docs/about" style={{ color: 'var(--text-secondary)', cursor: 'pointer', textDecoration: 'none' }}>About</Link>
-          <a href="https://github.com/techczech/windows-vibe-guide" target="_blank" style={{ color: 'var(--text-secondary)' }} aria-label="GitHub Repository">
+          <a href="https://github.com/techczech/desktop-vibe-guide" target="_blank" style={{ color: 'var(--text-secondary)' }} aria-label="GitHub Repository">
             <Github size={24} />
           </a>
         </nav>
@@ -78,8 +79,8 @@ function Layout({ children }) {
       </main>
 
       <footer className="footer" role="contentinfo">
-        Built with <a href="https://antigravity.google">Antigravity</a> by <a href="https://dominiklukes.net">Dominik Lukes</a> •
-        <a href="https://github.com/techczech/windows-vibe-guide" style={{ marginLeft: '0.5rem' }}>View Source</a>
+        Built with <a href="https://antigravity.google">Antigravity</a> •
+        <a href="https://github.com/techczech/desktop-vibe-guide" style={{ marginLeft: '0.5rem' }}>View Source</a>
       </footer>
 
       {isSearchOpen && (
@@ -139,9 +140,9 @@ function HomePage() {
   return (
     <div style={{ paddingTop: '2rem' }}>
       <section className="hero">
-        <h1>Build Anything with AI on Windows</h1>
+        <h1>Guide to Desktop Productivity with Vibecoding Tools</h1>
         <p>
-          No coding experience required. Use Google's free Antigravity tool to create websites, apps, and tools just by chatting with an AI agent.
+          Master your machine using Antigravity. Beyond just writing and publishing code, learn to automate your desktop life, manage files, and build custom tools for your personal workflow—on both Mac and Windows.
         </p>
         <Link to="/docs/setup" className="hero-cta">
           Get Started <ArrowRight size={20} />
