@@ -1,4 +1,4 @@
-name = "windows-vibe-guide"
+name = "desktop-vibe-guide"
 pages_build_output_dir = "dist"
 
 [vars]
