@@ -1,4 +1,4 @@
-# Powering Your Webapps with AI 🧠
+# Powering Your Webapps with AI
 
 Building a website *with* AI is one thing. Building a website that *uses* AI is another.
 

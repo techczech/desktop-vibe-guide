@@ -5,6 +5,7 @@ import { BookOpen, Settings, Zap, Terminal, Github, ArrowLeft, ArrowRight, Code,
 
 const allDocs = [
   { id: 'setup', title: 'Getting Started', icon: <Settings size={20} />, path: '/docs/setup.md', category: 'key', description: 'Download Antigravity and start your productivity journey' },
+  { id: 'antigravity-quickstart', title: 'Antigravity Quick Start', icon: <Zap size={20} />, path: '/docs/antigravity-quickstart.md', category: 'key', description: 'Easy first steps with Antigravity—create a project and start building' },
   { id: 'non-dev', title: 'Beginner Walkthrough', icon: <BookOpen size={20} />, path: '/docs/non-dev-guide.md', category: 'key', description: 'Step-by-step guide for non-technical users' },
   { id: 'workflow', title: 'Desktop Productivity', icon: <Zap size={20} />, path: '/docs/workflow.md', category: 'key', description: 'High-speed workflows for files, tasks, and code' },
   { id: 'terminal-basics', title: 'Terminal Basics', icon: <Terminal size={20} />, path: '/docs/terminal-basics.md', category: 'key', description: 'History, core commands, and CLI survival guide' },
@@ -12,6 +13,8 @@ const allDocs = [
   { id: 'hosting', title: 'Webapp Hosting', icon: <Cloud size={20} />, path: '/docs/webapp-hosting.md', category: 'useful', description: 'Free hosting guidelines for your webapps' },
   { id: 'ai-features', title: 'Adding AI Features', icon: <Sparkles size={20} />, path: '/docs/adding-ai-features.md', category: 'useful', description: 'Power your apps with Google\'s AI' },
   { id: 'ai-studio', title: 'Migrating from AI Studio', icon: <Zap size={20} />, path: '/docs/from-ai-studio.md', category: 'useful', description: 'Migrate prototypes to local development' },
+  { id: 'alternative-agents', title: 'Alternative AI Agents', icon: <Code size={20} />, path: '/docs/alternative-agents.md', category: 'useful', description: 'Compare Antigravity, Cursor, Claude Code, and other tools' },
+  { id: 'file-formats', title: 'File Formats Guide', icon: <BookOpen size={20} />, path: '/docs/file-formats.md', category: 'useful', description: 'Master Markdown, JSON, and CSV for AI workflows' },
   { id: 'git-github', title: 'Git & GitHub', icon: <Github size={20} />, path: '/docs/git-github-basics.md', category: 'useful', description: 'Version control and backing up code' },
   { id: 'markdown', title: 'Markdown for Writers', icon: <BookOpen size={20} />, path: '/docs/markdown-for-writers.md', category: 'useful', description: 'Write text better than in Word' },
   { id: 'about', title: 'About', icon: <User size={20} />, path: '/docs/about.md', category: 'other', description: 'How this guide was created' },
