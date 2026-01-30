@@ -215,14 +215,25 @@ function DocView() {
 
           const extractedHeadings = [];
           const lines = text.split('\n');
+          let inCodeBlock = false;
+
           lines.forEach(line => {
-            const match = line.trim().match(/^(#{1,3})\s+(.*)$/);
-            if (match) {
-              extractedHeadings.push({
-                level: match[1].length,
-                text: match[2],
-                id: match[2].toLowerCase().replace(/[^\w]+/g, '-')
-              });
+            // Check if we're entering or exiting a code block
+            if (line.trim().startsWith('```')) {
+              inCodeBlock = !inCodeBlock;
+              return;
+            }
+
+            // Only extract headings if we're not in a code block
+            if (!inCodeBlock) {
+              const match = line.trim().match(/^(#{1,3})\s+(.*)$/);
+              if (match) {
+                extractedHeadings.push({
+                  level: match[1].length,
+                  text: match[2],
+                  id: match[2].toLowerCase().replace(/[^\w]+/g, '-')
+                });
+              }
             }
           });
           setHeadings(extractedHeadings);
