@@ -24,7 +24,7 @@ You talk to it in plain English, and it does the work.
 
 ### It's Also a Great Text Editor
 
-Antigravity isn't just for code. It can edit any text file—documents, notes, research papers. When you write in **Markdown** (a simple formatting language), your text can easily be converted into websites, PDFs, or other formats. This entire documentation site was written in Markdown files that the agent then turned into a website.
+Antigravity isn't just for code. It can edit any text file—documents, notes, research papers. When you write in [**Markdown**](markdown-for-writers.md) (a simple formatting language that is both easy to write and read), your text can easily be converted into websites, PDFs, or other formats. This entire documentation site was written in Markdown files that the agent then turned into a website.
 
 ### Alternatives to Antigravity
 
