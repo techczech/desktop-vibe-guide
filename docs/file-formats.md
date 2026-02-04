@@ -196,6 +196,7 @@ Now, you can see how much easier it is to know everything about any person in th
 }
 ```
 
+
 ### How to Work with JSON
 
 JSON files end with the extension `.json`. 

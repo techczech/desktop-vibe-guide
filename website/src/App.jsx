@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { BrowserRouter, Routes, Route, Link, useParams, useNavigate, useLocation } from 'react-router-dom';
-import { BookOpen, Settings, Zap, Terminal, Github, ArrowLeft, ArrowRight, Code, User, Menu, X, ChevronRight, Cloud, Sparkles, List, ChevronDown, ChevronUp, Search as SearchIcon } from 'lucide-react';
+import { BookOpen, Settings, Zap, Terminal, Github, ArrowLeft, ArrowRight, Code, User, Menu, X, ChevronRight, Cloud, Sparkles, List, ChevronDown, ChevronUp, Search as SearchIcon, Copy, Check } from 'lucide-react';
 
 const allDocs = [
   { id: 'setup', title: 'Getting Started', icon: <Settings size={20} />, path: '/docs/setup.md', category: 'key', description: 'Download Antigravity and start your productivity journey' },
@@ -19,6 +19,38 @@ const allDocs = [
   { id: 'markdown', title: 'Markdown for Writers', icon: <BookOpen size={20} />, path: '/docs/markdown-for-writers.md', category: 'useful', description: 'Write text better than in Word' },
   { id: 'about', title: 'About', icon: <User size={20} />, path: '/docs/about.md', category: 'other', description: 'How this guide was created' },
 ];
+
+function CodeBlock({ children, className }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    const codeText = String(children).replace(/\n$/, '');
+    try {
+      await navigator.clipboard.writeText(codeText);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
+
+  return (
+    <div className="code-block-wrapper">
+      <pre className={className}>
+        <code>{children}</code>
+      </pre>
+      <button
+        className={`copy-button ${copied ? 'copied' : ''}`}
+        onClick={handleCopy}
+        aria-label={copied ? 'Copied!' : 'Copy code'}
+        title={copied ? 'Copied!' : 'Copy code'}
+      >
+        {copied ? <Check size={14} /> : <Copy size={14} />}
+        <span className="copy-text">{copied ? 'Copied!' : 'Copy'}</span>
+      </button>
+    </div>
+  );
+}
 
 const keyDocs = allDocs.filter(d => d.category === 'key');
 const usefulDocs = allDocs.filter(d => d.category === 'useful');
@@ -327,11 +359,13 @@ function DocView() {
             ) : (
               <ReactMarkdown
                 components={{
-                  code: ({ node, inline, className, children, ...props }) => (
-                    inline ?
-                      <code className="inline-code" {...props}>{children}</code> :
-                      <code {...props}>{children}</code>
-                  ),
+                  code: ({ node, inline, className, children, ...props }) => {
+                    if (inline) {
+                      return <code className="inline-code" {...props}>{children}</code>;
+                    }
+                    return <CodeBlock className={className}>{children}</CodeBlock>;
+                  },
+                  pre: ({ children }) => <>{children}</>,
                   h1: ({ children }) => {
                     const id = String(children).toLowerCase().replace(/[^\w]+/g, '-');
                     return <h1 id={id}>{children}</h1>;
