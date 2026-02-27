@@ -156,4 +156,12 @@ Stop fighting with Word. Start writing in plain text.
 
 ---
 
-*Last updated: January 22, 2026*
+## Next Steps
+
+- **[File Formats](file-formats.md)** — Learn about JSON and CSV alongside Markdown
+- **[Git & GitHub](git-github-basics.md)** — Version control for your writing projects
+- **[Desktop Productivity](workflow.md)** — High-speed workflows and tips
+
+---
+
+*Last updated: February 27, 2026*

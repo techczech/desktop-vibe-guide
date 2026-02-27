@@ -1,4 +1,4 @@
-# Alternative AI Coding Agents
+# Alternative AI Coding Agents 🔄
 
 While we recommend beginning with **Antigravity** because it's free, easy to set up, and built directly into your development environment, there are other powerful AI agents you might want to explore as your needs grow.
 
@@ -81,7 +81,7 @@ Codex CLI is a command-line agent (running inside your terminal) created by Open
 
 ---
 
-## 4. GitHub Copilot
+## 5. GitHub Copilot
 
 GitHub's AI pair programmer, integrated directly into VS Code and other editors.
 
@@ -99,7 +99,7 @@ GitHub's AI pair programmer, integrated directly into VS Code and other editors.
 
 ---
 
-## 5. VS Code + Extensions (Cline, Continue, etc.)
+## 6. VS Code + Extensions (Cline, Continue, etc.)
 
 Visual Studio Code with AI extensions like Cline or Continue. (And now Claude Code is also available as an extension for VS Code). 
 
@@ -138,10 +138,17 @@ Visual Studio Code with AI extensions like Cline or Continue. (And now Claude Co
 
 ## Can I Use Multiple Agents?
 
-Absolutely! Many developers use different tools for different tasks or even in parallel on the same project:
-.
+Absolutely! Many developers use different tools for different tasks or even in parallel on the same project.
 Each tool has its strengths. Start with one, then experiment with others as you become more comfortable.
 
 ---
 
-*Last updated: January 29, 2026*
+## Next Steps
+
+- **[Getting Started](setup.md)** — Set up Antigravity on your machine
+- **[Key Concepts](key-concepts.md)** — Essential mental models for working with any agent
+- **[Desktop Productivity](workflow.md)** — High-speed workflows and tips
+
+---
+
+*Last updated: February 27, 2026*

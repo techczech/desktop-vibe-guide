@@ -2,7 +2,7 @@
 
 ## Created by Prompting
 
-This entire website was created by **[Dominik Lukes](https://dominiklukes.net)** entirely by prompting an AI agent in Antigravity.
+This entire website was created by **[Dominik Lukes](https://dominiklukes.net)** entirely by prompting AI agents — initially in Antigravity on Windows, then continued on Mac using both Antigravity and Claude Code.
 
 No traditional coding or copyediting was required. The process involved:
 - Describing what was needed in plain English
@@ -43,7 +43,7 @@ The entire site—including the design, the documentation, the deployment config
 
 ## Tools Used
 
-- **[Antigravity](https://antigravity.google)**: The AI agent that wrote all the code
+- **[Antigravity](https://antigravity.google)** and **[Claude Code](https://claude.ai/)**: The AI agents that wrote all the code
 - **React + Vite**: The framework powering this site
 - **Cloudflare Pages**: Where this site is hosted
 - **GitHub**: Where the source code lives
@@ -66,4 +66,4 @@ Feel free to explore, fork, or use it as a starting point for your own projects.
 
 ---
 
-*Last updated: January 22, 2026*
+*Last updated: February 27, 2026*

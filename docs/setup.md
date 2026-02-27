@@ -12,15 +12,15 @@ No coding experience required. If you can chat, you can build.
 
 Unlike simple code assistants that just suggest code, Antigravity is an **agent** that can take actions on your behalf:
 
-- Write and edit any text files (not just code—documents, notes, Markdown files)
-- Run terminal commands
-- Start and manage local servers (so you can preview your work)
-- Open websites and interact with them
-- Install software and tools
-- Deploy websites to the internet
-- Create and manage GitHub repositories
+- Write and edit files, run terminal commands, and install software
+- Start servers, deploy websites, and manage GitHub repositories
+- Search the web and interact with browsers
+
+See the [Quick Start Guide](antigravity-quickstart.md#what-can-antigravity-do-) for the full list of capabilities.
 
 You talk to it in plain English, and it does the work.
+
+To understand why this matters—and how it's different from using ChatGPT—see **[Beyond Chatbots: The New Age of Desktop Productivity](why-desktop-agents.md)**.
 
 ### It's Also a Great Text Editor
 
@@ -36,21 +36,44 @@ Antigravity is free, which makes it a great starting point for beginners.
 
 ---
 
+## Step 1: Install Antigravity
+
 Go to the official download page:
 
 **[https://antigravity.google/download](https://antigravity.google/download)**
 
-Follow the installation instructions for your operating system (**macOS** or **Windows**). Once installed, you'll have access to the Antigravity interface with a chat sidebar where you can give commands to the agent.
+Follow the installation instructions for your operating system. Once installed, you'll have access to the Antigravity interface with a chat sidebar where you can give commands to the agent.
+
+### Platform-Specific Setup
+
+The rest of the setup process differs between Mac and Windows. Follow the guide for your platform:
+
+- 🍎 **[Mac Setup Guide](mac-setup-guide.md)** — Homebrew, Xcode tools, Gatekeeper, Apple Silicon tips
+- 🪟 **[Windows Setup Guide](windows-setup-guide.md)** — Volta, PowerShell, WSL, OneDrive tips
+
+### What's Different Between Mac and Windows?
+
+Both platforms work well with Antigravity. The main differences:
+
+| | Mac | Windows |
+|---|---|---|
+| **Terminal** | Terminal.app or iTerm2 (zsh) | Windows Terminal (PowerShell) |
+| **Package manager** | Homebrew | Volta / winget |
+| **Node.js install** | `brew install node` | `volta install node@22` |
+| **Common issues** | Gatekeeper, permissions | File locks, OneDrive, ARM/WSL |
+| **Path style** | `/Users/you/gitrepos` | `C:\Users\you\gitrepos` |
+
+The agent handles these differences for you. Just tell it what you want and it will use the right commands for your system.
 
 ---
 
 ## Step 2: Create Your First Project
 
-1. Create a new folder on your computer.
-   - **Mac/Linux:** `~/gitrepos/my-first-project`
-   - **Windows:** `C:\Users\YourName\my-first-project`
-2. Open this folder in Antigravity.
+1. Create a new folder on your computer for your projects.
+2. Open this folder in Antigravity (File → Open Folder).
 3. Now you have a workspace. This is where the agent will create files for you.
+
+See your platform-specific guide for detailed folder setup instructions.
 
 ---
 
@@ -68,6 +91,16 @@ The agent will start working. You'll see it creating files, writing code, and so
 - "Create a GitHub repository and push my code"
 - "Deploy this website to Cloudflare"
 - "Search online for how to fix this error"
+
+---
+
+## Understanding How the Agent Works
+
+Before you go further, it helps to understand a few core concepts:
+
+- **[Key Concepts](key-concepts.md)** — The essential mental models for working with desktop agents
+- **[Permissions and Approvals](permissions-and-approvals.md)** — How the agent asks your permission before taking actions
+- **[Planning Mode](planning-mode.md)** — How the agent plans complex projects before executing them
 
 ---
 
@@ -109,59 +142,6 @@ When the agent got stuck, the user said "Try something else" or "Search online f
 
 ---
 
-## Tools You Might Need
-
-The agent can install most things for you. Just ask. But here's what you might need:
-
-### For Version Control and Backup
-- **Git**: [git-scm.com](https://git-scm.com) — Track changes to your files
-- **GitHub Account**: [github.com](https://github.com) (free) — Store your code online
-- **GitHub CLI**: Ask the agent to install it, or run `winget install GitHub.cli`
-
-### For Publishing Websites
-- **Cloudflare Account**: [cloudflare.com](https://www.cloudflare.com) (free) — Host your website
-- **Wrangler**: Ask the agent to install it — The tool that deploys to Cloudflare
-
-### For Web Development
-- **Node.js**: The agent can install this for you via Volta
-- **Volta**: Manages Node.js versions cleanly
-
----
-
-## When You Need the Terminal
-
-Sometimes the agent will ask you to run a command yourself. Here's how:
-
-1. **Open your Terminal:**
-   - **Recommended (Both Platforms):** **[Warp](https://www.warp.dev/)** — An AI-powered terminal that makes commands easier to read and write.
-   - **Mac:** Open **Terminal** (via Spotlight/Command+Space) or **iTerm2**.
-   - **Windows:** Open **Windows Terminal** (search "Terminal" in Start menu).
-2. Copy the command the agent gives you.
-3. Paste it and press **Enter**.
-
-This happens for:
-- Installing global tools or system dependencies.
-- Final deployment authentication steps.
-- Native permission issues the agent can't bypass.
-
----
-
-## Advanced: Environment Tips
-
-### Mac
-If you are on an Apple Silicon (M1/M2/M3) Mac, most tools work natively. If you hit architecture issues, the agent might suggest installing Homebrew or using `arch -x86_64` for specific commands.
-
-### Windows
-If you're on a Surface Pro or ARM-based Windows device, some tools don't work natively. You might need **WSL** (Windows Subsystem for Linux):
-
-```powershell
-wsl --install
-```
-
-The agent will guide you if you need this setup.
-
----
-
 ## The Golden Rule
 
 **Just keep asking.**
@@ -173,10 +153,8 @@ The agent will guide you if you need this setup.
 
 The agent is patient. It will keep trying. You are the director; the agent executes.
 
-**Remember:** You are the Director. The AI is the Cameraman. If the shot is blurry, you don't grab the camera—you just tell them to focus.
-
-If you can chat, you can build.
+**Remember:** You're the director, not the camera operator — see [Beyond Chatbots](why-desktop-agents.md#the-director-metaphor) for this mindset.
 
 ---
 
-*Last updated: January 22, 2026*
+*Last updated: February 27, 2026*

@@ -1,4 +1,4 @@
-# Powering Your Webapps with AI
+# Powering Your Webapps with AI ✨
 
 Building a website *with* AI is one thing. Building a website that *uses* AI is another.
 
@@ -75,4 +75,12 @@ Adding AI to your apps transforms them from static pages into intelligent tools.
 
 ---
 
-*Last updated: January 22, 2026*
+## Next Steps
+
+- **[Migrating from AI Studio](from-ai-studio.md)** — Bring AI Studio prototypes to your computer
+- **[Webapp Hosting](webapp-hosting.md)** — Deploy your AI-powered app to the internet
+- **[File Formats](file-formats.md)** — Master Markdown, JSON, and CSV for AI workflows
+
+---
+
+*Last updated: February 27, 2026*
