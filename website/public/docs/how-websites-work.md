@@ -195,4 +195,12 @@ The agent will push your app to the internet.
 
 ---
 
-*Last updated: January 22, 2026*
+## Next Steps
+
+- **[Webapp Hosting](webapp-hosting.md)** — Deploy your site to the internet
+- **[Desktop Productivity](workflow.md)** — High-speed workflows and tips
+- **[Adding AI Features](adding-ai-features.md)** — Power your apps with AI
+
+---
+
+*Last updated: February 27, 2026*

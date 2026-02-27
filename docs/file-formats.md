@@ -1,4 +1,4 @@
-# File Formats for AI-Powered Workflows
+# File Formats for AI-Powered Workflows 📄
 
 Understanding file formats is crucial when working with AI agents. Different formats serve different purposes, and choosing the right one makes your work faster and more effective.
 
@@ -291,4 +291,16 @@ AI agents can easily convert between formats:
 
 ---
 
-*Remember: Let the AI agent handle the formatting. You focus on the content and structure—the agent will write the actual syntax.*  
+*Remember: Let the AI agent handle the formatting. You focus on the content and structure—the agent will write the actual syntax.*
+
+---
+
+## Next Steps
+
+- **[Markdown for Writers](markdown-for-writers.md)** — A deeper dive into Markdown for text-heavy work
+- **[Git & GitHub](git-github-basics.md)** — Version control and backing up code
+- **[Desktop Productivity](workflow.md)** — High-speed workflows and tips
+
+---
+
+*Last updated: February 27, 2026*

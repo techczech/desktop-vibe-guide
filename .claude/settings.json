@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./sync-docs.sh)",
+      "Bash(pnpm install)",
+      "Bash(pnpm run build)",
+      "Bash(git add CLAUDE.md agents-instructions/ docs/ website/public/docs/ website/src/App.jsx website/src/index.css website/pnpm-lock.yaml sync-docs.sh sourcedocs/ .claude/)"
+    ]
+  }
+}

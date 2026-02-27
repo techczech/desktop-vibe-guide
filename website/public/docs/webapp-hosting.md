@@ -91,4 +91,12 @@ Start with Level 1. Get your site live. Then ask the agent to help you add compl
 
 ---
 
-*Last updated: January 22, 2026*
+## Next Steps
+
+- **[How Webapps Run](how-websites-work.md)** — Understand browsers, servers, and localhost
+- **[Git & GitHub](git-github-basics.md)** — Version control and backing up code
+- **[Desktop Productivity](workflow.md)** — High-speed workflows and tips
+
+---
+
+*Last updated: February 27, 2026*

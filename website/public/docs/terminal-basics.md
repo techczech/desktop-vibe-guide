@@ -67,3 +67,15 @@ Antigravity has its own terminal view. When you ask it to "Start the server," it
 ---
 
 **Remember:** The terminal is where the "magic" happens. Learning even a few commands makes you a more effective "Director" for your AI agent.
+
+---
+
+## Next Steps
+
+- **[How Webapps Run](how-websites-work.md)** — Understand browsers, servers, and React
+- **[Desktop Productivity](workflow.md)** — High-speed workflows and tips
+- **[Git & GitHub](git-github-basics.md)** — Version control and backing up code
+
+---
+
+*Last updated: February 27, 2026*

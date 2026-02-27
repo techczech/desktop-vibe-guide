@@ -1,6 +1,9 @@
-# Antigravity Quick Start Guide
+# Antigravity Quick Start Guide ⚡
 
-Before you can use Antigravity to manage your projects, you need to create a workspace folder on your computer.
+Before you can use Antigravity to manage your projects, you need to create a workspace folder on your computer. If you haven't set up Antigravity yet, follow your platform guide first:
+
+- 🍎 **[Mac Setup Guide](mac-setup-guide.md)**
+- 🪟 **[Windows Setup Guide](windows-setup-guide.md)**
 
 ---
 
@@ -9,8 +12,8 @@ Before you can use Antigravity to manage your projects, you need to create a wor
 You can do this however you are most comfortable:
 
 ### Using Finder/File Explorer (The Familiar Option)
-- **Mac**: Go to your home directory, create a folder named `gitrepos` or anything else, and inside it, create another folder for your project (e.g., `my-first-project`).
-- **Windows**: Navigate to `C:\Users\YourName`, create a folder named `gitrepos` or anything else, and inside it, create your project folder.
+- **Mac**: Go to your home directory (`/Users/YourName`), create a folder named `gitrepos`, and inside it, create another folder for your project (e.g., `my-first-project`).
+- **Windows**: Navigate to `C:\Users\YourName`, create a folder named `gitrepos`, and inside it, create your project folder.
 
 ### Using Terminal (The Fast Option)
 Paste this command:
@@ -91,6 +94,15 @@ Watch what it's doing. You'll learn from seeing the process. The agent will show
 - Commands it's running
 - Errors it encounters and how it fixes them
 
+### Use Planning Mode for Complex Tasks
+For big projects, ask the agent to plan first:
+> *"Plan this out before making any changes"*
+
+The agent will create an implementation plan you can review. See **[Planning Mode](planning-mode.md)** for the full guide.
+
+### Understand Permissions
+The agent will ask your approval before running commands or editing files. This keeps you in control. See **[Permissions and Approvals](permissions-and-approvals.md)** to learn how to configure this.
+
 ### Iterate
 If something isn't right:
 - Describe what's wrong
@@ -106,10 +118,12 @@ If you don't understand something:
 
 ## Next Steps
 
+- **Understand the concepts**: See [Key Concepts](key-concepts.md) for the essential mental models
 - **Learn the workflow**: See [Desktop Productivity](workflow.md) for high-speed techniques
 - **Understand alternatives**: Check out [Alternative Agents](alternative-agents.md) to compare tools
 - **Master file formats**: Read [File Formats](file-formats.md) to work effectively with Markdown, JSON, and CSV
+- **Why desktop agents?**: Read [Beyond Chatbots](why-desktop-agents.md) for the bigger picture
 
 ---
 
-*Remember: You are the director. The AI is the crew. If the shot is blurry, you don't grab the camera—you just tell them to focus.*
+*Last updated: February 27, 2026*

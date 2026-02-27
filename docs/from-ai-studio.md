@@ -151,4 +151,12 @@ You've just leveled up from prototyping to real development—all by chatting.
 
 ---
 
-*Last updated: January 22, 2026*
+## Next Steps
+
+- **[Adding AI Features](adding-ai-features.md)** — Power your apps with Google's AI
+- **[Webapp Hosting](webapp-hosting.md)** — Deploy to Cloudflare or Vercel
+- **[Desktop Productivity](workflow.md)** — High-speed workflows and tips
+
+---
+
+*Last updated: February 27, 2026*

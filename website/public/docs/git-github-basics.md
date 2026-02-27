@@ -89,3 +89,15 @@ You're a researcher sharing a CSV file of climate data:
 > *"Initialize a Git repository and push this to GitHub as a public project called 'my-dataset'."*
 
 And it will do it. That's the power of agentic coding.
+
+---
+
+## Next Steps
+
+- **[Webapp Hosting](webapp-hosting.md)** — Deploy your project to the internet
+- **[File Formats](file-formats.md)** — Master Markdown, JSON, and CSV for AI workflows
+- **[Desktop Productivity](workflow.md)** — High-speed workflows and tips
+
+---
+
+*Last updated: February 27, 2026*

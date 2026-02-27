@@ -1,22 +1,31 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { BrowserRouter, Routes, Route, Link, useParams, useNavigate, useLocation } from 'react-router-dom';
-import { BookOpen, Settings, Zap, Terminal, Github, ArrowLeft, ArrowRight, Code, User, Menu, X, ChevronRight, Cloud, Sparkles, List, ChevronDown, ChevronUp, Search as SearchIcon, Copy, Check } from 'lucide-react';
+import { BookOpen, Settings, Zap, Terminal, Github, ArrowLeft, ArrowRight, Code, User, Menu, X, ChevronRight, Cloud, Sparkles, List, ChevronDown, ChevronUp, Search as SearchIcon, Copy, Check, Shield, Lightbulb, Apple, Monitor } from 'lucide-react';
 
 const allDocs = [
-  { id: 'setup', title: 'Getting Started', icon: <Settings size={20} />, path: '/docs/setup.md', category: 'key', description: 'Download Antigravity and start your productivity journey' },
-  { id: 'antigravity-quickstart', title: 'Antigravity Quick Start', icon: <Zap size={20} />, path: '/docs/antigravity-quickstart.md', category: 'key', description: 'Easy first steps with Antigravity—create a project and start building' },
-  { id: 'non-dev', title: 'Beginner Walkthrough', icon: <BookOpen size={20} />, path: '/docs/non-dev-guide.md', category: 'key', description: 'Step-by-step guide for non-technical users' },
-  { id: 'workflow', title: 'Desktop Productivity', icon: <Zap size={20} />, path: '/docs/workflow.md', category: 'key', description: 'High-speed workflows for files, tasks, and code' },
-  { id: 'terminal-basics', title: 'Terminal Basics', icon: <Terminal size={20} />, path: '/docs/terminal-basics.md', category: 'key', description: 'History, core commands, and CLI survival guide' },
-  { id: 'how-websites', title: 'How Webapps Run', icon: <Code size={20} />, path: '/docs/how-websites-work.md', category: 'useful', description: 'Understand browsers, servers, and React' },
-  { id: 'hosting', title: 'Webapp Hosting', icon: <Cloud size={20} />, path: '/docs/webapp-hosting.md', category: 'useful', description: 'Free hosting guidelines for your webapps' },
-  { id: 'ai-features', title: 'Adding AI Features', icon: <Sparkles size={20} />, path: '/docs/adding-ai-features.md', category: 'useful', description: 'Power your apps with Google\'s AI' },
-  { id: 'ai-studio', title: 'Migrating from AI Studio', icon: <Zap size={20} />, path: '/docs/from-ai-studio.md', category: 'useful', description: 'Migrate prototypes to local development' },
-  { id: 'alternative-agents', title: 'Alternative AI Agents', icon: <Code size={20} />, path: '/docs/alternative-agents.md', category: 'useful', description: 'Compare Antigravity, Cursor, Claude Code, and other tools' },
-  { id: 'file-formats', title: 'File Formats Guide', icon: <BookOpen size={20} />, path: '/docs/file-formats.md', category: 'useful', description: 'Master Markdown, JSON, and CSV for AI workflows' },
-  { id: 'git-github', title: 'Git & GitHub', icon: <Github size={20} />, path: '/docs/git-github-basics.md', category: 'useful', description: 'Version control and backing up code' },
-  { id: 'markdown', title: 'Markdown for Writers', icon: <BookOpen size={20} />, path: '/docs/markdown-for-writers.md', category: 'useful', description: 'Write text better than in Word' },
+  // Start Here — essential onboarding, read in order
+  { id: 'why-desktop-agents', title: 'Beyond Chatbots', icon: <Lightbulb size={20} />, path: '/docs/why-desktop-agents.md', category: 'start', description: 'Why desktop agents are the new age of productivity' },
+  { id: 'setup', title: 'Getting Started', icon: <Settings size={20} />, path: '/docs/setup.md', category: 'start', description: 'Download Antigravity and start your productivity journey' },
+  { id: 'antigravity-quickstart', title: 'Antigravity Quick Start', icon: <Zap size={20} />, path: '/docs/antigravity-quickstart.md', category: 'start', description: 'Easy first steps with Antigravity—create a project and start building' },
+  { id: 'key-concepts', title: 'Key Concepts', icon: <BookOpen size={20} />, path: '/docs/key-concepts.md', category: 'start', description: 'Essential mental models for working with desktop agents' },
+  // Core Skills — deeper topics, read as needed
+  { id: 'workflow', title: 'Desktop Productivity', icon: <Zap size={20} />, path: '/docs/workflow.md', category: 'core', description: 'High-speed workflows for files, tasks, and code' },
+  { id: 'permissions', title: 'Permissions & Approvals', icon: <Shield size={20} />, path: '/docs/permissions-and-approvals.md', category: 'core', description: 'How the agent asks permission and how to configure trust' },
+  { id: 'planning-mode', title: 'Planning Mode', icon: <List size={20} />, path: '/docs/planning-mode.md', category: 'core', description: 'How the agent plans complex projects before executing' },
+  // Reference — look up when relevant
+  { id: 'mac-setup', title: 'Mac Setup Guide', icon: <Apple size={20} />, path: '/docs/mac-setup-guide.md', category: 'reference', description: 'Complete Mac-specific setup and troubleshooting' },
+  { id: 'windows-setup', title: 'Windows Setup Guide', icon: <Monitor size={20} />, path: '/docs/windows-setup-guide.md', category: 'reference', description: 'Complete Windows-specific setup and troubleshooting' },
+  { id: 'terminal-basics', title: 'Terminal Basics', icon: <Terminal size={20} />, path: '/docs/terminal-basics.md', category: 'reference', description: 'History, core commands, and CLI survival guide' },
+  { id: 'how-websites', title: 'How Webapps Run', icon: <Code size={20} />, path: '/docs/how-websites-work.md', category: 'reference', description: 'Understand browsers, servers, and React' },
+  { id: 'hosting', title: 'Webapp Hosting', icon: <Cloud size={20} />, path: '/docs/webapp-hosting.md', category: 'reference', description: 'Free hosting guidelines for your webapps' },
+  { id: 'ai-features', title: 'Adding AI Features', icon: <Sparkles size={20} />, path: '/docs/adding-ai-features.md', category: 'reference', description: 'Power your apps with Google\'s AI' },
+  { id: 'ai-studio', title: 'Migrating from AI Studio', icon: <Zap size={20} />, path: '/docs/from-ai-studio.md', category: 'reference', description: 'Migrate prototypes to local development' },
+  { id: 'alternative-agents', title: 'Alternative AI Agents', icon: <Code size={20} />, path: '/docs/alternative-agents.md', category: 'reference', description: 'Compare Antigravity, Cursor, Claude Code, and other tools' },
+  { id: 'file-formats', title: 'File Formats Guide', icon: <BookOpen size={20} />, path: '/docs/file-formats.md', category: 'reference', description: 'Master Markdown, JSON, and CSV for AI workflows' },
+  { id: 'git-github', title: 'Git & GitHub', icon: <Github size={20} />, path: '/docs/git-github-basics.md', category: 'reference', description: 'Version control and backing up code' },
+  { id: 'markdown', title: 'Markdown for Writers', icon: <BookOpen size={20} />, path: '/docs/markdown-for-writers.md', category: 'reference', description: 'Write text better than in Word' },
+  // Other
   { id: 'about', title: 'About', icon: <User size={20} />, path: '/docs/about.md', category: 'other', description: 'How this guide was created' },
 ];
 
@@ -52,13 +61,22 @@ function CodeBlock({ children, className }) {
   );
 }
 
-const keyDocs = allDocs.filter(d => d.category === 'key');
-const usefulDocs = allDocs.filter(d => d.category === 'useful');
+const startDocs = allDocs.filter(d => d.category === 'start');
+const coreDocs = allDocs.filter(d => d.category === 'core');
+const referenceDocs = allDocs.filter(d => d.category === 'reference');
 
 function Layout({ children }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const searchInputRef = useRef(null);
   const navigate = useNavigate();
+
+  const filteredDocs = searchQuery.trim()
+    ? allDocs.filter(doc => {
+        const q = searchQuery.toLowerCase();
+        return doc.title.toLowerCase().includes(q) || doc.description.toLowerCase().includes(q);
+      })
+    : allDocs;
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -68,6 +86,7 @@ function Layout({ children }) {
       }
       if (e.key === 'Escape' && isSearchOpen) {
         setIsSearchOpen(false);
+        setSearchQuery('');
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -119,7 +138,7 @@ function Layout({ children }) {
       </footer>
 
       {isSearchOpen && (
-        <div className="search-overlay" onClick={() => setIsSearchOpen(false)} role="dialog" aria-modal="true" aria-label="Search documentation">
+        <div className="search-overlay" onClick={() => { setIsSearchOpen(false); setSearchQuery(''); }} role="dialog" aria-modal="true" aria-label="Search documentation">
           <div className="search-modal" onClick={e => e.stopPropagation()}>
             <div className="search-input-wrapper">
               <SearchIcon size={20} color="var(--text-secondary)" aria-hidden="true" />
@@ -129,17 +148,17 @@ function Layout({ children }) {
                 placeholder="Search documentation..."
                 className="search-input"
                 aria-label="Search input"
-                onChange={(e) => {
-                  // For now, simple filtering. In prod, use a better index.
-                  // This is just UI state for the prototype
-                }}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <button onClick={() => setIsSearchOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)' }} aria-label="Close search">
+              <button onClick={() => { setIsSearchOpen(false); setSearchQuery(''); }} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)' }} aria-label="Close search">
                 <X size={20} />
               </button>
             </div>
             <div className="search-results" role="listbox">
-              {allDocs.map(doc => (
+              {filteredDocs.length === 0 ? (
+                <div style={{ padding: '1rem', color: 'var(--text-secondary)', textAlign: 'center' }}>No results found</div>
+              ) : filteredDocs.map(doc => (
                 <div
                   key={doc.id}
                   className="search-result-item"
@@ -148,11 +167,13 @@ function Layout({ children }) {
                   onClick={() => {
                     navigate(`/docs/${doc.id}`);
                     setIsSearchOpen(false);
+                    setSearchQuery('');
                   }}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') {
                       navigate(`/docs/${doc.id}`);
                       setIsSearchOpen(false);
+                      setSearchQuery('');
                     }
                   }}
                 >
@@ -185,9 +206,10 @@ function HomePage() {
       </section>
 
       <section className="cards-section">
-        <h2 className="section-title">Key Guides</h2>
+        <h2 className="section-title">Start Here</h2>
+        <p className="section-subtitle">New to desktop agents? Read these in order.</p>
         <div className="cards-grid">
-          {keyDocs.map(doc => (
+          {startDocs.map(doc => (
             <Link key={doc.id} to={`/docs/${doc.id}`} className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="card-icon">
                 {React.cloneElement(doc.icon, { size: 24 })}
@@ -200,9 +222,26 @@ function HomePage() {
       </section>
 
       <section className="cards-section">
-        <h2 className="section-title">Useful Knowledge</h2>
+        <h2 className="section-title">Core Skills</h2>
+        <p className="section-subtitle">Deepen your understanding of key workflows.</p>
         <div className="cards-grid">
-          {usefulDocs.map(doc => (
+          {coreDocs.map(doc => (
+            <Link key={doc.id} to={`/docs/${doc.id}`} className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="card-icon">
+                {React.cloneElement(doc.icon, { size: 24 })}
+              </div>
+              <h3>{doc.title}</h3>
+              <p>{doc.description}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="cards-section">
+        <h2 className="section-title">Reference</h2>
+        <p className="section-subtitle">Look up specific topics when you need them.</p>
+        <div className="cards-grid">
+          {referenceDocs.map(doc => (
             <Link key={doc.id} to={`/docs/${doc.id}`} className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="card-icon">
                 {React.cloneElement(doc.icon, { size: 24 })}
@@ -291,8 +330,8 @@ function DocView() {
 
         <aside className={`doc-sidebar ${sidebarOpen ? 'open' : ''}`}>
           <div className="sidebar-section">
-            <div className="sidebar-heading">Key Guides</div>
-            {keyDocs.map(doc => (
+            <div className="sidebar-heading">Start Here</div>
+            {startDocs.map(doc => (
               <Link
                 key={doc.id}
                 to={`/docs/${doc.id}`}
@@ -306,8 +345,23 @@ function DocView() {
             ))}
           </div>
           <div className="sidebar-section">
-            <div className="sidebar-heading">Useful Knowledge</div>
-            {usefulDocs.map(doc => (
+            <div className="sidebar-heading">Core Skills</div>
+            {coreDocs.map(doc => (
+              <Link
+                key={doc.id}
+                to={`/docs/${doc.id}`}
+                className={`sidebar-item ${activeDoc.id === doc.id ? 'active' : ''}`}
+                onClick={() => setSidebarOpen(false)}
+                style={{ textDecoration: 'none' }}
+              >
+                {doc.icon}
+                {doc.title}
+              </Link>
+            ))}
+          </div>
+          <div className="sidebar-section">
+            <div className="sidebar-heading">Reference</div>
+            {referenceDocs.map(doc => (
               <Link
                 key={doc.id}
                 to={`/docs/${doc.id}`}
