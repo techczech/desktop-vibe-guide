@@ -351,6 +351,36 @@ body {
   text-decoration: underline;
 }
 
+/* Tables */
+.markdown-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  display: block;
+}
+
+.markdown-container thead {
+  background: var(--accent-glow);
+}
+
+.markdown-container th,
+.markdown-container td {
+  padding: 0.6rem 1rem;
+  text-align: left;
+  border: 1px solid var(--border-color);
+}
+
+.markdown-container th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.markdown-container tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.02);
+}
+
 /* Code Block with Copy Button */
 .code-block-wrapper {
   position: relative;
