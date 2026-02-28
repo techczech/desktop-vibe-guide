@@ -1,3 +1,14 @@
+---
+title: "Git & GitHub"
+template: C
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: agenttools
+teaches: [git, github, version-control]
+prerequisites: [terminal-basics]
+---
 # Git & GitHub for Everyone 📚
 
 You don't need to be a developer to use Git and GitHub. Think of them as **Dropbox for version control**—but more powerful.

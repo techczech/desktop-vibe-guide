@@ -1,3 +1,14 @@
+---
+title: "Terminal Basics"
+template: C
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: agenttools
+teaches: [terminal, cli, commands]
+prerequisites: []
+---
 # Understanding the Terminal: Your Productivity Command Center 🖥️
 
 The terminal (also called the command line or shell) can look intimidating—a black box with blinking text. But it's actually the most powerful tool on your computer.

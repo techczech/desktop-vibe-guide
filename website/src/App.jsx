@@ -294,7 +294,9 @@ function DocView() {
         setLoading(true);
         try {
           const response = await fetch(activeDoc.path);
-          const text = await response.text();
+          let text = await response.text();
+          // Strip YAML frontmatter (--- ... ---) if present
+          text = text.replace(/^---\n[\s\S]*?\n---\n/, '');
           setContent(text);
 
           const extractedHeadings = [];

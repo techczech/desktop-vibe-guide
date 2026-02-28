@@ -1,3 +1,14 @@
+---
+title: "Markdown for Writers"
+template: B
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: writing
+teaches: [markdown, formatting, text-editing]
+prerequisites: [setup]
+---
 # Markdown for Writers: A Better Way to Write 📝
 
 If you've ever used Microsoft Word, you know the frustration: files get corrupted, "Track Changes" becomes a mess, and trying to convert your document to a website is a nightmare.

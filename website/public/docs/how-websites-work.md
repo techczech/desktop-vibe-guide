@@ -1,3 +1,14 @@
+---
+title: "How Webapps Run"
+template: B
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: webapps
+teaches: [browsers, servers, react, localhost]
+prerequisites: [setup]
+---
 # How Webapps Run on Your Computer 🖥️
 
 Before you can build websites, it helps to understand how they actually work. Don't worry—this is simpler than it sounds.

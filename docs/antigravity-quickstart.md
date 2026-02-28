@@ -1,3 +1,14 @@
+---
+title: "Antigravity Quick Start"
+template: A
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: start
+teaches: [first-project, antigravity-basics]
+prerequisites: [setup]
+---
 # Antigravity Quick Start Guide ⚡
 
 Before you can use Antigravity to manage your projects, you need to create a workspace folder on your computer. If you haven't set up Antigravity yet, follow your platform guide first:

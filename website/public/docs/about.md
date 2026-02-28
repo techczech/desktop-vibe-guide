@@ -1,3 +1,14 @@
+---
+title: "About"
+template: D
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: other
+teaches: []
+prerequisites: []
+---
 # About This Project 👋
 
 ## Created by Prompting

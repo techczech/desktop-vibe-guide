@@ -1,3 +1,14 @@
+---
+title: "Adding AI Features"
+template: B
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: webapps
+teaches: [gemini-api, ai-integration]
+prerequisites: [how-websites-work]
+---
 # Powering Your Webapps with AI ✨
 
 Building a website *with* AI is one thing. Building a website that *uses* AI is another.

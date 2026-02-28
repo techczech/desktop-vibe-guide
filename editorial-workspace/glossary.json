@@ -1,0 +1,146 @@
+[
+  {
+    "term": "Antigravity",
+    "definition": "Google's agentic AI IDE that lets you build tools and automate tasks through conversation",
+    "variants_ok": ["Antigravity IDE"],
+    "variants_bad": ["Project IDX", "antigravity", "Anti-Gravity", "AntiGravity"],
+    "first_defined_in": "setup.md",
+    "category": "tool"
+  },
+  {
+    "term": "vibecoding",
+    "definition": "Building software through natural language conversation with an AI agent rather than writing code manually",
+    "variants_ok": ["vibe coding", "vibe-coding", "Vibecoding"],
+    "variants_bad": [],
+    "first_defined_in": "why-desktop-agents.md",
+    "category": "concept"
+  },
+  {
+    "term": "agent",
+    "definition": "An AI that can take actions on your computer — running commands, editing files, browsing the web — not just answer questions",
+    "variants_ok": ["AI agent", "desktop agent", "coding agent"],
+    "variants_bad": ["bot", "chatbot"],
+    "first_defined_in": "why-desktop-agents.md",
+    "category": "concept"
+  },
+  {
+    "term": "prompt",
+    "definition": "The instruction or request you type to tell the agent what to do",
+    "variants_ok": ["instruction", "request"],
+    "variants_bad": [],
+    "first_defined_in": "key-concepts.md",
+    "category": "concept"
+  },
+  {
+    "term": "context",
+    "definition": "Everything the agent knows about your project — open files, conversation history, project structure",
+    "variants_ok": ["context window"],
+    "variants_bad": [],
+    "first_defined_in": "key-concepts.md",
+    "category": "concept"
+  },
+  {
+    "term": "terminal",
+    "definition": "A text-based interface for running commands on your computer; the agent uses it to execute tasks",
+    "variants_ok": ["command line", "CLI", "shell"],
+    "variants_bad": ["console"],
+    "first_defined_in": "terminal-basics.md",
+    "category": "tool"
+  },
+  {
+    "term": "Markdown",
+    "definition": "A simple text formatting language using symbols like # for headings and * for bold, readable as plain text",
+    "variants_ok": ["markdown", "MD"],
+    "variants_bad": [],
+    "first_defined_in": "markdown-for-writers.md",
+    "category": "format"
+  },
+  {
+    "term": "Git",
+    "definition": "Version control system that tracks changes to your files, like a detailed undo history for your entire project",
+    "variants_ok": ["git"],
+    "variants_bad": ["GIT"],
+    "first_defined_in": "git-github-basics.md",
+    "category": "tool"
+  },
+  {
+    "term": "GitHub",
+    "definition": "A website that stores Git repositories online, enabling backup, sharing, and collaboration",
+    "variants_ok": [],
+    "variants_bad": ["Github", "github", "GITHUB"],
+    "first_defined_in": "git-github-basics.md",
+    "category": "tool"
+  },
+  {
+    "term": "Homebrew",
+    "definition": "A package manager for macOS that installs developer tools via terminal commands",
+    "variants_ok": ["brew"],
+    "variants_bad": ["homebrew"],
+    "first_defined_in": "mac-setup-guide.md",
+    "category": "platform"
+  },
+  {
+    "term": "WSL",
+    "definition": "Windows Subsystem for Linux — lets you run Linux tools on Windows, needed for some developer workflows",
+    "variants_ok": ["Windows Subsystem for Linux"],
+    "variants_bad": ["wsl"],
+    "first_defined_in": "windows-setup-guide.md",
+    "category": "platform"
+  },
+  {
+    "term": "localhost",
+    "definition": "Your own computer acting as a web server — lets you preview websites before publishing them",
+    "variants_ok": ["local server", "dev server"],
+    "variants_bad": [],
+    "first_defined_in": "how-websites-work.md",
+    "category": "concept"
+  },
+  {
+    "term": "Cloudflare Pages",
+    "definition": "A free hosting service that publishes your website to the internet",
+    "variants_ok": ["Cloudflare"],
+    "variants_bad": ["cloudflare pages"],
+    "first_defined_in": "webapp-hosting.md",
+    "category": "tool"
+  },
+  {
+    "term": "Planning Mode",
+    "definition": "A feature where the agent creates a detailed plan before executing, used for complex multi-step projects",
+    "variants_ok": ["planning mode", "plan mode"],
+    "variants_bad": [],
+    "first_defined_in": "planning-mode.md",
+    "category": "workflow"
+  },
+  {
+    "term": "permissions",
+    "definition": "The system that controls what the agent can do without asking — from asking every time to full auto mode",
+    "variants_ok": ["trust levels", "approval system"],
+    "variants_bad": [],
+    "first_defined_in": "permissions-and-approvals.md",
+    "category": "workflow"
+  },
+  {
+    "term": "director metaphor",
+    "definition": "The framing that you are a film director and the AI agent is your production crew — you decide what to build, they handle the technical execution",
+    "variants_ok": [],
+    "variants_bad": [],
+    "first_defined_in": "why-desktop-agents.md",
+    "category": "concept"
+  },
+  {
+    "term": "Gemini API",
+    "definition": "Google's AI service that lets you add AI capabilities (text generation, image analysis) to your apps",
+    "variants_ok": ["Gemini"],
+    "variants_bad": ["gemini api"],
+    "first_defined_in": "adding-ai-features.md",
+    "category": "tool"
+  },
+  {
+    "term": "AI Studio",
+    "definition": "Google's web-based prototyping environment for building AI-powered apps, often a starting point before moving to local development",
+    "variants_ok": ["Google AI Studio"],
+    "variants_bad": ["ai studio"],
+    "first_defined_in": "from-ai-studio.md",
+    "category": "tool"
+  }
+]

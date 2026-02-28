@@ -1,3 +1,14 @@
+---
+title: "Alternative AI Agents"
+template: A
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: why
+teaches: [agent-comparison, cursor, claude-code, windsurf]
+prerequisites: []
+---
 # Alternative AI Coding Agents 🔄
 
 While we recommend beginning with **Antigravity** because it's free, easy to set up, and built directly into your development environment, there are other powerful AI agents you might want to explore as your needs grow.

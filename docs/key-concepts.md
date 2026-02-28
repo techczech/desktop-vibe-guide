@@ -1,3 +1,14 @@
+---
+title: "Key Concepts"
+template: A
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: why
+teaches: [mental-models, prompts, context, agents]
+prerequisites: []
+---
 # Key Concepts for Working with Desktop Agents 🧠
 
 Before you dive in, it helps to understand a few core ideas. These aren't technical lessons—they're mental models that will help you get the most out of Antigravity.

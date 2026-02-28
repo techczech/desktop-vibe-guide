@@ -1,3 +1,14 @@
+---
+title: "Permissions & Approvals"
+template: B
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: agents
+teaches: [permissions, trust-levels, auto-mode]
+prerequisites: [setup]
+---
 # Permissions and Approvals: Staying in Control 🔐
 
 When you work with Antigravity, the agent can do powerful things on your computer—run commands, create files, install software. But it always asks first. This guide explains how the permission system works and how to configure it to match your comfort level.

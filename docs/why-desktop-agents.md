@@ -1,3 +1,14 @@
+---
+title: "Beyond Chatbots"
+template: A
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: why
+teaches: [desktop-agents, agent-paradigm, director-metaphor]
+prerequisites: []
+---
 # Beyond Chatbots: The New Age of Desktop Productivity 🚀
 
 You've probably used ChatGPT, Copilot, or Gemini in a browser. You type a question, get an answer, maybe copy some text and paste it into a document. That works—but it's like ordering food through a letter slot when you could invite the chef into your kitchen.

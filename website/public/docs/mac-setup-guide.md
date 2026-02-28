@@ -1,3 +1,14 @@
+---
+title: "Mac Setup Guide"
+template: A
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: start
+teaches: [homebrew, xcode-tools, mac-config]
+prerequisites: [setup]
+---
 # Mac Setup Guide 🍎
 
 Everything you need to get Antigravity running on your Mac, from installation to your first project.

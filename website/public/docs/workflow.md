@@ -1,3 +1,14 @@
+---
+title: "Desktop Productivity"
+template: B
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: agents
+teaches: [file-management, workflow-patterns, productivity]
+prerequisites: [setup]
+---
 # High-Speed Productivity with Antigravity 🚀
 
 This guide covers how to achieve maximum productivity and "vibe coding" speed when working with Antigravity. Whether you're a complete beginner or experienced with the tool, the workflows below will help you get the most out of your agent.
