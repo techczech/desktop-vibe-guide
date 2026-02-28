@@ -33,6 +33,13 @@ const allDocs = [
   { id: 'about', title: 'About', icon: <User size={20} />, path: '/docs/about.md', category: 'other', description: 'How this guide was created' },
 ];
 
+// Build a lookup from .md filename to route id, e.g. "mac-setup-guide.md" → "mac-setup"
+const mdFileToDocId = {};
+for (const doc of allDocs) {
+  const filename = doc.path.split('/').pop(); // e.g. "mac-setup-guide.md"
+  mdFileToDocId[filename] = doc.id;
+}
+
 function CodeBlock({ children, className }) {
   const [copied, setCopied] = useState(false);
 
@@ -423,6 +430,15 @@ function DocView() {
                   h3: ({ children }) => {
                     const id = String(children).toLowerCase().replace(/[^\w]+/g, '-');
                     return <h3 id={id}>{children}</h3>;
+                  },
+                  a: ({ href, children, ...props }) => {
+                    if (href && href.endsWith('.md') && !href.includes('://')) {
+                      const docId = mdFileToDocId[href];
+                      if (docId) {
+                        return <Link to={`/docs/${docId}`} {...props}>{children}</Link>;
+                      }
+                    }
+                    return <a href={href} {...props}>{children}</a>;
                   }
                 }}
               >
