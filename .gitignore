@@ -30,6 +30,12 @@ dist-ssr/
 # task.md
 # walkthrough.md
 
+# Editorial workspace ephemeral output
+editorial-workspace/audit-reports/*
+!editorial-workspace/audit-reports/.gitkeep
+editorial-workspace/research/*
+!editorial-workspace/research/.gitkeep
+
 # Logs
 logs
 *.log

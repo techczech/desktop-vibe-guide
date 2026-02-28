@@ -1,3 +1,14 @@
+---
+title: "Webapp Hosting"
+template: B
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: webapps
+teaches: [deployment, cloudflare, hosting]
+prerequisites: [how-websites-work]
+---
 # Webapp Hosting Explained ☁️
 
 When you run a website on your computer (`localhost`), only you can see it. To show it to the world, you need **hosting**.

@@ -1,3 +1,14 @@
+---
+title: "Migrating from AI Studio"
+template: B
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: webapps
+teaches: [migration, ai-studio, local-dev]
+prerequisites: [how-websites-work]
+---
 # Migrating from Google AI Studio to Your Computer 🚀
 
 Google AI Studio is a great place to prototype AI-powered apps. But at some point, you'll want to:

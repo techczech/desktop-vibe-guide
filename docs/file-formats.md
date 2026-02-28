@@ -1,3 +1,14 @@
+---
+title: "File Formats Guide"
+template: B
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: writing
+teaches: [markdown, json, csv, file-formats]
+prerequisites: [markdown-for-writers]
+---
 # File Formats for AI-Powered Workflows 📄
 
 Understanding file formats is crucial when working with AI agents. Different formats serve different purposes, and choosing the right one makes your work faster and more effective.

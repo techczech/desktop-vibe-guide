@@ -1,3 +1,14 @@
+---
+title: "Planning Mode"
+template: B
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: agents
+teaches: [planning, complex-projects, multi-step]
+prerequisites: [workflow]
+---
 # Planning Mode: Complex Projects Made Simple 📋
 
 When you ask Antigravity to do something big—like "build a website for my research"—the agent doesn't just start typing code randomly. It **plans first**. Understanding how this works helps you stay in control of complex projects.

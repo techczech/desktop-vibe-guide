@@ -1,3 +1,14 @@
+---
+title: "Windows Setup Guide"
+template: A
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: start
+teaches: [volta, powershell, wsl]
+prerequisites: [setup]
+---
 # Windows Setup Guide 🪟
 
 Everything you need to get Antigravity running on Windows, from installation to your first project.

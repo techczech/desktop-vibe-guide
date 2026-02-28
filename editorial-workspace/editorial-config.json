@@ -1,0 +1,29 @@
+{
+  "project": "Desktop Vibe Guide",
+  "docs_dir": "docs",
+  "frontmatter": {
+    "required_fields": ["title", "status", "updated", "template", "category"],
+    "allowed_status": ["draft", "review", "published"],
+    "allowed_templates": ["A", "B", "C", "D"]
+  },
+  "structural_checks": {
+    "require_frontmatter": true,
+    "require_emoji_h1": true,
+    "require_next_steps": true,
+    "next_steps_exceptions": ["about.md"],
+    "require_hr_between_sections": true,
+    "require_footer_date": true,
+    "require_internal_links_resolve": true,
+    "try_block_format": "> **Try:** *\"prompt\"*"
+  },
+  "paths": {
+    "glossary": "editorial-workspace/glossary.json",
+    "changelog": "editorial-workspace/changelog.jsonl",
+    "rules": "editorial-workspace/rules/structural-rules.md",
+    "voice_guide": "agents-instructions/voice-and-tone.md",
+    "doc_templates": "agents-instructions/doc-templates.md",
+    "lessons_learned": "agents-instructions/lessons-learned.md",
+    "audit_reports": "editorial-workspace/audit-reports"
+  },
+  "audience": "Researchers, academics, and non-developers wanting to automate their desktop workflow"
+}

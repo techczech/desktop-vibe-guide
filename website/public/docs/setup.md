@@ -1,3 +1,14 @@
+---
+title: "Getting Started"
+template: A
+status: published
+version: 1.0
+created: 2026-02-27
+updated: 2026-02-28
+category: start
+teaches: [antigravity, installation, setup]
+prerequisites: []
+---
 # Getting Started with AI-Powered Productivity 🚀
 
 Welcome! This guide will take you from zero to building and publishing your own websites and software—all by having a conversation with an AI.
