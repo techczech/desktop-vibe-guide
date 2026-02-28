@@ -9,8 +9,8 @@ Voice, tone, and style reviewer for Desktop Vibe Guide docs.
 ## Quick Start
 
 1. Read the generic workflow: `editorial-workspace/core/references/review-workflow.md`
-2. Read the voice guide: `agents-instructions/voice-and-tone.md`
-3. Read doc templates: `agents-instructions/doc-templates.md`
+2. Read the voice guide: `editorial-workspace/guides/voice-and-tone.md`
+3. Read doc templates: `editorial-workspace/guides/doc-templates.md`
 4. Read project config: `editorial-workspace/editorial-config.json`
 5. Follow the workflow steps with the project-specific context below
 

@@ -4,13 +4,17 @@
       "Bash(./sync-docs.sh)",
       "Bash(pnpm install)",
       "Bash(pnpm run build)",
-      "Bash(git add CLAUDE.md agents-instructions/ docs/ website/public/docs/ website/src/App.jsx website/src/index.css website/pnpm-lock.yaml sync-docs.sh sourcedocs/ .claude/)",
+      "Bash(git add CLAUDE.md AGENTS.md editorial-workspace/ docs/ website/public/docs/ website/src/App.jsx website/src/index.css website/pnpm-lock.yaml sync-docs.sh sourcedocs/ .claude/)",
       "Bash(git rm --cached website/package-lock.json)",
       "Bash(git add website/package-lock.json)",
-      "Bash(git add CLAUDE.md agents-instructions/reference-section-taxonomy.md website/src/App.jsx website/src/index.css)",
       "Bash(git commit:*)",
       "Bash(git push)",
-      "Read(//Users/dominiklukes/gitrepos/02_workskills/**)"
+      "Read(//Users/dominiklukes/gitrepos/02_workskills/**)",
+      "Bash(git add README.md assets/project-readme.md scripts/setup-agents.sh)",
+      "Bash(git add editorial-workspace/README.md)"
+    ],
+    "additionalDirectories": [
+      "/Users/dominiklukes/gitrepos/02_workskills/doc-editorial-skill"
     ]
   }
 }

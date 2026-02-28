@@ -29,7 +29,7 @@ Not `> *"prompt"*` (missing "Try:" label) and not `**Ask the agent:** *"prompt"*
 - **Template C** (reference docs): Lookup material, scannable structure
 - **Template D** (meta pages): About, etc.
 
-See `agents-instructions/doc-templates.md` for full template structures.
+See `editorial-workspace/guides/doc-templates.md` for full template structures.
 
 ## Known Issues (from lessons-learned.md)
 

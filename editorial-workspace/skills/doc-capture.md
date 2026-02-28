@@ -30,7 +30,7 @@ For every doc modified in this session, set `updated:` to today's date in the YA
 If new terms were introduced or existing definitions refined, update `editorial-workspace/glossary.json`.
 
 ### 5. Capture Learnings
-Append to `agents-instructions/lessons-learned.md`:
+Append to `editorial-workspace/guides/lessons-learned.md`:
 - Style decisions with rationale
 - Common issues found (for future audits to catch)
 - Patterns that worked well
