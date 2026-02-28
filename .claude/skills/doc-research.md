@@ -1,0 +1,1 @@
+../../editorial-workspace/skills/doc-research.md
