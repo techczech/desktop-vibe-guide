@@ -201,6 +201,31 @@ body {
   margin-bottom: 0.25rem;
 }
 
+/* Topic Groups in Explore by Topic */
+.topic-group {
+  margin-bottom: 2.5rem;
+}
+
+.topic-group:last-child {
+  margin-bottom: 0;
+}
+
+.topic-group-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.topic-group-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
 /* Doc Layout with Sidebar */
 .doc-layout {
   display: flex;

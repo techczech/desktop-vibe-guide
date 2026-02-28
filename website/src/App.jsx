@@ -4,27 +4,30 @@ import { BrowserRouter, Routes, Route, Link, useParams, useNavigate, useLocation
 import { BookOpen, Settings, Zap, Terminal, Github, ArrowLeft, ArrowRight, Code, User, Menu, X, ChevronRight, Cloud, Sparkles, List, ChevronDown, ChevronUp, Search as SearchIcon, Copy, Check, Shield, Lightbulb, Apple, Monitor } from 'lucide-react';
 
 const allDocs = [
-  // Start Here — essential onboarding, read in order
-  { id: 'why-desktop-agents', title: 'Beyond Chatbots', icon: <Lightbulb size={20} />, path: '/docs/why-desktop-agents.md', category: 'start', description: 'Why desktop agents are the new age of productivity' },
+  // Why Desktop Agents — the big picture
+  { id: 'why-desktop-agents', title: 'Beyond Chatbots', icon: <Lightbulb size={20} />, path: '/docs/why-desktop-agents.md', category: 'why', description: 'Why desktop agents are the new age of productivity' },
+  { id: 'key-concepts', title: 'Key Concepts', icon: <BookOpen size={20} />, path: '/docs/key-concepts.md', category: 'why', description: 'Essential mental models for working with desktop agents' },
+  { id: 'alternative-agents', title: 'Alternative AI Agents', icon: <Code size={20} />, path: '/docs/alternative-agents.md', category: 'why', description: 'Compare Antigravity, Cursor, Claude Code, and other tools' },
+  // Getting Started — install, configure, first project
   { id: 'setup', title: 'Getting Started', icon: <Settings size={20} />, path: '/docs/setup.md', category: 'start', description: 'Download Antigravity and start your productivity journey' },
   { id: 'antigravity-quickstart', title: 'Antigravity Quick Start', icon: <Zap size={20} />, path: '/docs/antigravity-quickstart.md', category: 'start', description: 'Easy first steps with Antigravity—create a project and start building' },
-  { id: 'key-concepts', title: 'Key Concepts', icon: <BookOpen size={20} />, path: '/docs/key-concepts.md', category: 'start', description: 'Essential mental models for working with desktop agents' },
-  // Core Skills — deeper topics, read as needed
-  { id: 'workflow', title: 'Desktop Productivity', icon: <Zap size={20} />, path: '/docs/workflow.md', category: 'core', description: 'High-speed workflows for files, tasks, and code' },
-  { id: 'permissions', title: 'Permissions & Approvals', icon: <Shield size={20} />, path: '/docs/permissions-and-approvals.md', category: 'core', description: 'How the agent asks permission and how to configure trust' },
-  { id: 'planning-mode', title: 'Planning Mode', icon: <List size={20} />, path: '/docs/planning-mode.md', category: 'core', description: 'How the agent plans complex projects before executing' },
-  // Reference — look up when relevant
-  { id: 'mac-setup', title: 'Mac Setup Guide', icon: <Apple size={20} />, path: '/docs/mac-setup-guide.md', category: 'reference', description: 'Complete Mac-specific setup and troubleshooting' },
-  { id: 'windows-setup', title: 'Windows Setup Guide', icon: <Monitor size={20} />, path: '/docs/windows-setup-guide.md', category: 'reference', description: 'Complete Windows-specific setup and troubleshooting' },
-  { id: 'terminal-basics', title: 'Terminal Basics', icon: <Terminal size={20} />, path: '/docs/terminal-basics.md', category: 'reference', description: 'History, core commands, and CLI survival guide' },
-  { id: 'how-websites', title: 'How Webapps Run', icon: <Code size={20} />, path: '/docs/how-websites-work.md', category: 'reference', description: 'Understand browsers, servers, and React' },
-  { id: 'hosting', title: 'Webapp Hosting', icon: <Cloud size={20} />, path: '/docs/webapp-hosting.md', category: 'reference', description: 'Free hosting guidelines for your webapps' },
-  { id: 'ai-features', title: 'Adding AI Features', icon: <Sparkles size={20} />, path: '/docs/adding-ai-features.md', category: 'reference', description: 'Power your apps with Google\'s AI' },
-  { id: 'ai-studio', title: 'Migrating from AI Studio', icon: <Zap size={20} />, path: '/docs/from-ai-studio.md', category: 'reference', description: 'Migrate prototypes to local development' },
-  { id: 'alternative-agents', title: 'Alternative AI Agents', icon: <Code size={20} />, path: '/docs/alternative-agents.md', category: 'reference', description: 'Compare Antigravity, Cursor, Claude Code, and other tools' },
-  { id: 'file-formats', title: 'File Formats Guide', icon: <BookOpen size={20} />, path: '/docs/file-formats.md', category: 'reference', description: 'Master Markdown, JSON, and CSV for AI workflows' },
-  { id: 'git-github', title: 'Git & GitHub', icon: <Github size={20} />, path: '/docs/git-github-basics.md', category: 'reference', description: 'Version control and backing up code' },
-  { id: 'markdown', title: 'Markdown for Writers', icon: <BookOpen size={20} />, path: '/docs/markdown-for-writers.md', category: 'reference', description: 'Write text better than in Word' },
+  { id: 'mac-setup', title: 'Mac Setup Guide', icon: <Apple size={20} />, path: '/docs/mac-setup-guide.md', category: 'start', description: 'Complete Mac-specific setup and troubleshooting' },
+  { id: 'windows-setup', title: 'Windows Setup Guide', icon: <Monitor size={20} />, path: '/docs/windows-setup-guide.md', category: 'start', description: 'Complete Windows-specific setup and troubleshooting' },
+  // Working with Agents — daily interaction skills
+  { id: 'workflow', title: 'Desktop Productivity', icon: <Zap size={20} />, path: '/docs/workflow.md', category: 'agents', description: 'High-speed workflows for files, tasks, and code' },
+  { id: 'permissions', title: 'Permissions & Approvals', icon: <Shield size={20} />, path: '/docs/permissions-and-approvals.md', category: 'agents', description: 'How the agent asks permission and how to configure trust' },
+  { id: 'planning-mode', title: 'Planning Mode', icon: <List size={20} />, path: '/docs/planning-mode.md', category: 'agents', description: 'How the agent plans complex projects before executing' },
+  // Writing & Documents — content creation
+  { id: 'markdown', title: 'Markdown for Writers', icon: <BookOpen size={20} />, path: '/docs/markdown-for-writers.md', category: 'writing', description: 'Write text better than in Word' },
+  { id: 'file-formats', title: 'File Formats Guide', icon: <BookOpen size={20} />, path: '/docs/file-formats.md', category: 'writing', description: 'Master Markdown, JSON, and CSV for AI workflows' },
+  // Building Web Apps — understand, deploy, enhance, migrate
+  { id: 'how-websites', title: 'How Webapps Run', icon: <Code size={20} />, path: '/docs/how-websites-work.md', category: 'webapps', description: 'Understand browsers, servers, and React' },
+  { id: 'hosting', title: 'Webapp Hosting', icon: <Cloud size={20} />, path: '/docs/webapp-hosting.md', category: 'webapps', description: 'Free hosting guidelines for your webapps' },
+  { id: 'ai-features', title: 'Adding AI Features', icon: <Sparkles size={20} />, path: '/docs/adding-ai-features.md', category: 'webapps', description: 'Power your apps with Google\'s AI' },
+  { id: 'ai-studio', title: 'Migrating from AI Studio', icon: <Zap size={20} />, path: '/docs/from-ai-studio.md', category: 'webapps', description: 'Migrate prototypes to local development' },
+  // Tools for Agents — things agents use on your behalf
+  { id: 'terminal-basics', title: 'Terminal Basics', icon: <Terminal size={20} />, path: '/docs/terminal-basics.md', category: 'agenttools', description: 'History, core commands, and CLI survival guide' },
+  { id: 'git-github', title: 'Git & GitHub', icon: <Github size={20} />, path: '/docs/git-github-basics.md', category: 'agenttools', description: 'Version control and backing up code' },
   // Other
   { id: 'about', title: 'About', icon: <User size={20} />, path: '/docs/about.md', category: 'other', description: 'How this guide was created' },
 ];
@@ -61,9 +64,19 @@ function CodeBlock({ children, className }) {
   );
 }
 
-const startDocs = allDocs.filter(d => d.category === 'start');
-const coreDocs = allDocs.filter(d => d.category === 'core');
-const referenceDocs = allDocs.filter(d => d.category === 'reference');
+const categoryMeta = {
+  why:        { label: 'Why Desktop Agents',   subtitle: 'The big picture — what agents are and what\'s out there.' },
+  start:      { label: 'Getting Started',      subtitle: 'Install, configure, and create your first project.' },
+  agents:     { label: 'Working with Agents',  subtitle: 'Deepen your understanding of key workflows.' },
+  writing:    { label: 'Writing & Documents',  subtitle: 'Content-focused tools for text and data.' },
+  webapps:    { label: 'Building Web Apps',    subtitle: 'Understand, build, and deploy web applications.' },
+  agenttools: { label: 'Tools for Agents',     subtitle: 'Know what they are and why they matter — agents handle the how.' },
+};
+
+const docsByCategory = {};
+for (const key of Object.keys(categoryMeta)) {
+  docsByCategory[key] = allDocs.filter(d => d.category === key);
+}
 
 function Layout({ children }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -205,52 +218,44 @@ function HomePage() {
         </Link>
       </section>
 
-      <section className="cards-section">
-        <h2 className="section-title">Start Here</h2>
-        <p className="section-subtitle">New to desktop agents? Read these in order.</p>
-        <div className="cards-grid">
-          {startDocs.map(doc => (
-            <Link key={doc.id} to={`/docs/${doc.id}`} className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="card-icon">
-                {React.cloneElement(doc.icon, { size: 24 })}
-              </div>
-              <h3>{doc.title}</h3>
-              <p>{doc.description}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
+      {['why', 'start'].map(catKey => (
+        <section key={catKey} className="cards-section">
+          <h2 className="section-title">{categoryMeta[catKey].label}</h2>
+          <p className="section-subtitle">{categoryMeta[catKey].subtitle}</p>
+          <div className="cards-grid">
+            {docsByCategory[catKey].map(doc => (
+              <Link key={doc.id} to={`/docs/${doc.id}`} className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="card-icon">
+                  {React.cloneElement(doc.icon, { size: 24 })}
+                </div>
+                <h3>{doc.title}</h3>
+                <p>{doc.description}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ))}
 
       <section className="cards-section">
-        <h2 className="section-title">Core Skills</h2>
-        <p className="section-subtitle">Deepen your understanding of key workflows.</p>
-        <div className="cards-grid">
-          {coreDocs.map(doc => (
-            <Link key={doc.id} to={`/docs/${doc.id}`} className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="card-icon">
-                {React.cloneElement(doc.icon, { size: 24 })}
-              </div>
-              <h3>{doc.title}</h3>
-              <p>{doc.description}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="cards-section">
-        <h2 className="section-title">Reference</h2>
-        <p className="section-subtitle">Look up specific topics when you need them.</p>
-        <div className="cards-grid">
-          {referenceDocs.map(doc => (
-            <Link key={doc.id} to={`/docs/${doc.id}`} className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="card-icon">
-                {React.cloneElement(doc.icon, { size: 24 })}
-              </div>
-              <h3>{doc.title}</h3>
-              <p>{doc.description}</p>
-            </Link>
-          ))}
-        </div>
+        <h2 className="section-title">Explore by Topic</h2>
+        <p className="section-subtitle">Browse all guides organized by subject.</p>
+        {['agents', 'writing', 'webapps', 'agenttools'].map(catKey => (
+          <div key={catKey} className="topic-group">
+            <h3 className="topic-group-title">{categoryMeta[catKey].label}</h3>
+            <p className="topic-group-subtitle">{categoryMeta[catKey].subtitle}</p>
+            <div className="cards-grid">
+              {docsByCategory[catKey].map(doc => (
+                <Link key={doc.id} to={`/docs/${doc.id}`} className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className="card-icon">
+                    {React.cloneElement(doc.icon, { size: 24 })}
+                  </div>
+                  <h3>{doc.title}</h3>
+                  <p>{doc.description}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
       </section>
     </div>
   );
@@ -329,51 +334,27 @@ function DocView() {
         </button>
 
         <aside className={`doc-sidebar ${sidebarOpen ? 'open' : ''}`}>
-          <div className="sidebar-section">
-            <div className="sidebar-heading">Start Here</div>
-            {startDocs.map(doc => (
-              <Link
-                key={doc.id}
-                to={`/docs/${doc.id}`}
-                className={`sidebar-item ${activeDoc.id === doc.id ? 'active' : ''}`}
-                onClick={() => setSidebarOpen(false)}
-                style={{ textDecoration: 'none' }}
-              >
-                {doc.icon}
-                {doc.title}
-              </Link>
-            ))}
-          </div>
-          <div className="sidebar-section">
-            <div className="sidebar-heading">Core Skills</div>
-            {coreDocs.map(doc => (
-              <Link
-                key={doc.id}
-                to={`/docs/${doc.id}`}
-                className={`sidebar-item ${activeDoc.id === doc.id ? 'active' : ''}`}
-                onClick={() => setSidebarOpen(false)}
-                style={{ textDecoration: 'none' }}
-              >
-                {doc.icon}
-                {doc.title}
-              </Link>
-            ))}
-          </div>
-          <div className="sidebar-section">
-            <div className="sidebar-heading">Reference</div>
-            {referenceDocs.map(doc => (
-              <Link
-                key={doc.id}
-                to={`/docs/${doc.id}`}
-                className={`sidebar-item ${activeDoc.id === doc.id ? 'active' : ''}`}
-                onClick={() => setSidebarOpen(false)}
-                style={{ textDecoration: 'none' }}
-              >
-                {doc.icon}
-                {doc.title}
-              </Link>
-            ))}
-          </div>
+          {Object.entries(categoryMeta).map(([catKey, meta]) => {
+            const docs = docsByCategory[catKey];
+            if (!docs || docs.length === 0) return null;
+            return (
+              <div key={catKey} className="sidebar-section">
+                <div className="sidebar-heading">{meta.label}</div>
+                {docs.map(doc => (
+                  <Link
+                    key={doc.id}
+                    to={`/docs/${doc.id}`}
+                    className={`sidebar-item ${activeDoc.id === doc.id ? 'active' : ''}`}
+                    onClick={() => setSidebarOpen(false)}
+                    style={{ textDecoration: 'none' }}
+                  >
+                    {doc.icon}
+                    {doc.title}
+                  </Link>
+                ))}
+              </div>
+            );
+          })}
         </aside>
 
         <div className="doc-view">
