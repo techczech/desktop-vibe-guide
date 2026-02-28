@@ -68,12 +68,15 @@ Read `agents-instructions/README.md` first. It routes you to the right file.
 
 ### Document Categories (in App.jsx)
 
-| Category | Purpose | Docs |
-|----------|---------|------|
-| `start` | Essential onboarding, read in order | why-desktop-agents, setup, antigravity-quickstart, key-concepts |
-| `core` | Deeper topics, read as needed | workflow, permissions-and-approvals, planning-mode |
-| `reference` | Look up when relevant | Platform guides, terminal, hosting, AI features, file formats, git, markdown, alternatives |
-| `other` | Meta | about |
+| Category key | Sidebar label | Docs |
+|---|---|---|
+| `why` | Why Desktop Agents | why-desktop-agents, key-concepts, alternative-agents |
+| `start` | Getting Started | setup, antigravity-quickstart, mac-setup, windows-setup |
+| `agents` | Working with Agents | workflow, permissions-and-approvals, planning-mode |
+| `writing` | Writing & Documents | markdown-for-writers, file-formats |
+| `webapps` | Building Web Apps | how-websites-work, webapp-hosting, adding-ai-features, from-ai-studio |
+| `agenttools` | Tools for Agents | terminal-basics, git-github |
+| `other` | *(not in sidebar)* | about |
 
 ## Deployment
 
