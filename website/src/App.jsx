@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { BrowserRouter, Routes, Route, Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { BookOpen, Settings, Zap, Terminal, Github, ArrowLeft, ArrowRight, Code, User, Menu, X, ChevronRight, Cloud, Sparkles, List, ChevronDown, ChevronUp, Search as SearchIcon, Copy, Check, Shield, Lightbulb, Apple, Monitor } from 'lucide-react';
 
@@ -393,14 +394,24 @@ function DocView() {
               <div style={{ opacity: 0.5 }}>Loading...</div>
             ) : (
               <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
                 components={{
-                  code: ({ node, inline, className, children, ...props }) => {
-                    if (inline) {
-                      return <code className="inline-code" {...props}>{children}</code>;
+                  pre: ({ node }) => {
+                    const codeEl = node?.children?.find(c => c.tagName === 'code');
+                    const className = codeEl?.properties?.className
+                      ? codeEl.properties.className.join(' ')
+                      : undefined;
+                    function getText(n) {
+                      if (!n) return '';
+                      if (n.type === 'text') return n.value || '';
+                      if (n.children) return n.children.map(getText).join('');
+                      return '';
                     }
-                    return <CodeBlock className={className}>{children}</CodeBlock>;
+                    return <CodeBlock className={className}>{getText(codeEl || node)}</CodeBlock>;
                   },
-                  pre: ({ children }) => <>{children}</>,
+                  code: ({ children, ...props }) => {
+                    return <code className="inline-code" {...props}>{children}</code>;
+                  },
                   h1: ({ children }) => {
                     const id = String(children).toLowerCase().replace(/[^\w]+/g, '-');
                     return <h1 id={id}>{children}</h1>;
