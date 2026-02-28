@@ -1,0 +1,1 @@
+../../editorial-workspace/agents/fact-checker.md
