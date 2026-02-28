@@ -55,9 +55,20 @@ Examples of what you might say:
 - `file-formats.md` and `markdown-for-writers.md` have markdown overlap
 - `git-github-basics.md` missing some `---` separators
 
-**Voice guide**: `agents-instructions/voice-and-tone.md` — conversational, encouraging, never condescending, explain jargon on first use.
+## Documentation Authoring Guides
 
-**Doc templates**: `agents-instructions/doc-templates.md` — structural patterns for each template type.
+Detailed guidance for writing and structuring docs lives in `guides/`:
+
+| You need to...                           | Read                            |
+|------------------------------------------|---------------------------------|
+| Write or rewrite a doc's content         | `guides/voice-and-tone.md` — conversational, encouraging, never condescending, explain jargon on first use |
+| Create a new doc or restructure one      | `guides/doc-templates.md` — structural patterns for each template type (A/B/C/D) |
+| Understand what's gone wrong before      | `guides/lessons-learned.md` — known issues and historical decisions |
+| Decide where a reference doc fits        | `guides/reference-section-taxonomy.md` — how reference docs relate and should be organized |
+
+**Audience reminder**: The Desktop Vibe Guide is for researchers, academics, and non-developers. They are smart but not technical.
+
+The editorial skills reference these guides as source data — the connection is configured in `editorial-config.json` under `paths`.
 
 ## How It All Connects
 

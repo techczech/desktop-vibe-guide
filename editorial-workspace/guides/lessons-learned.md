@@ -20,7 +20,7 @@ Append new entries at the **TOP** of the Log section (newest first).
 
 ### 2026-02-27 Initial corpus analysis
 
-**Context:** Reviewed all 19 docs to extract conventions and create the agents-instructions folder.
+**Context:** Reviewed all 19 docs to extract conventions and create the editorial guides.
 
 **Observations:**
 

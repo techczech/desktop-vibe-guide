@@ -20,9 +20,9 @@
     "glossary": "editorial-workspace/glossary.json",
     "changelog": "editorial-workspace/changelog.jsonl",
     "rules": "editorial-workspace/rules/structural-rules.md",
-    "voice_guide": "agents-instructions/voice-and-tone.md",
-    "doc_templates": "agents-instructions/doc-templates.md",
-    "lessons_learned": "agents-instructions/lessons-learned.md",
+    "voice_guide": "editorial-workspace/guides/voice-and-tone.md",
+    "doc_templates": "editorial-workspace/guides/doc-templates.md",
+    "lessons_learned": "editorial-workspace/guides/lessons-learned.md",
     "audit_reports": "editorial-workspace/audit-reports"
   },
   "audience": "Researchers, academics, and non-developers wanting to automate their desktop workflow"

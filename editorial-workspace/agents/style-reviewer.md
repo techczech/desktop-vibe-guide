@@ -14,8 +14,8 @@ Review markdown docs in `docs/` for voice, tone, and style consistency. You do N
 ## Style References
 
 Read these files first:
-- `agents-instructions/voice-and-tone.md` — full style guide with examples
-- `agents-instructions/doc-templates.md` — template structures (A/B/C/D)
+- `editorial-workspace/guides/voice-and-tone.md` — full style guide with examples
+- `editorial-workspace/guides/doc-templates.md` — template structures (A/B/C/D)
 - `editorial-workspace/glossary.json` — terms and audience context
 
 ## Key Standards
