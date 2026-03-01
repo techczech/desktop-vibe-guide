@@ -1,1 +1,0 @@
-../../editorial-workspace/skills/doc-learning-paths.md

@@ -1,1 +1,0 @@
-../../editorial-workspace/skills/doc-terms.md

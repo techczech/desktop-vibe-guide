@@ -71,18 +71,18 @@ Detailed guidance for writing and structuring docs lives in `editorial-workspace
 
 ### Editorial Quality System
 
-Automated documentation quality checks are managed by the editorial system in `editorial-workspace/`. Use these commands to run checks:
+Interactive documentation quality workflows managed by the editorial system in `editorial-workspace/`. Every workflow proposes findings and asks before acting.
 
 | Command | What it does |
 |---------|-------------|
-| `/doc-audit` | Checks structural rules — emoji H1, `---` separators, `## Next Steps`, footer, frontmatter, links |
-| `/doc-terms` | Checks 18 canonical terms for consistent spelling |
-| `/doc-review` | Reviews voice and tone against the project's style guide |
-| `/doc-research` | Verifies tool instructions are still accurate via web search |
-| `/doc-pipeline` | Runs all 4 checks at once using parallel reviewer agents |
+| `/doc-audit` | Audits docs across 5 dimensions: structure, completeness, consistency, navigation, audience fit |
+| `/doc-terms` | Discovers candidate terms and checks terminology consistency against the glossary |
+| `/doc-review` | Reviews voice and tone — evolves the voice guide based on your feedback |
+| `/doc-research` | Two-step fact verification: identifies checkable claims, then verifies what you select |
 | `/doc-changelog` | Logs what changed to `editorial-workspace/changelog.jsonl` |
 | `/doc-capture` | Captures decisions and learnings at the end of a session |
-| `/doc-learning-paths` | Generates reading sequences for different audience personas |
+| `/doc-learning-paths` | Proposes reader personas and generates reading sequences |
+| `/doc-init` | Guided walkthrough for setting up a new editorial workspace |
 
 See `editorial-workspace/README.md` for full details on the editorial system, its files, and how it connects to the shared `doc-editorial-skill` repo (linked via `editorial-workspace/core/`).
 
