@@ -11,10 +11,14 @@
       "Bash(git push)",
       "Read(//Users/dominiklukes/gitrepos/02_workskills/**)",
       "Bash(git add README.md assets/project-readme.md scripts/setup-agents.sh)",
-      "Bash(git add editorial-workspace/README.md)"
+      "Bash(git add editorial-workspace/README.md)",
+      "Bash(git status -u)",
+      "Bash(git add AGENTS.md editorial-workspace/README.md editorial-workspace/editorial-config.json editorial-workspace/skills/doc-audit.md editorial-workspace/skills/doc-capture.md editorial-workspace/skills/doc-changelog.md editorial-workspace/skills/doc-init.md editorial-workspace/skills/doc-learning-paths.md editorial-workspace/skills/doc-research.md editorial-workspace/skills/doc-review.md editorial-workspace/skills/doc-terms.md .claude/agents/ .claude/skills/ .claude/settings.json)",
+      "Bash(git rm editorial-workspace/skills/doc-pipeline.md .claude/skills/doc-pipeline.md)"
     ],
     "additionalDirectories": [
-      "/Users/dominiklukes/gitrepos/02_workskills/doc-editorial-skill"
+      "/Users/dominiklukes/gitrepos/02_workskills/doc-editorial-skill",
+      "/Users/dominiklukes/gitrepos/10_webapps/desktop-vibe-guide/.claude/skills"
     ]
   }
 }

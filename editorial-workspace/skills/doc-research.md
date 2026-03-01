@@ -1,17 +1,22 @@
 ---
-description: Verify factual accuracy of tool instructions, URLs, commands, and platform-specific claims in docs. Uses web search to check against official sources. Invoke with /doc-research.
+description: >
+  Two-step fact verification. First identifies checkable claims and groups them by staleness
+  risk, then verifies only the ones you select. Uses web search against official sources.
+  Invoke with /doc-research.
 ---
 
 # /doc-research
 
-Fact verification for Desktop Vibe Guide docs.
+Two-step fact verification for Desktop Vibe Guide.
 
-## Quick Start
+## How to Run
 
 1. Read the generic workflow: `editorial-workspace/core/references/research-workflow.md`
-2. Follow the workflow steps with the project-specific sources below
+2. Scan doc(s) for verifiable claims
+3. Present candidates grouped by risk — ask which to verify
+4. Research selected claims, present findings, ask which to update
 
-## What to Verify in This Project
+## What to Look For in This Project
 
 ### Tool Instructions
 - **Antigravity**: IDE features, keyboard shortcuts, workspace setup, extension capabilities
@@ -24,18 +29,7 @@ Fact verification for Desktop Vibe Guide docs.
 - **macOS**: Homebrew paths (`/opt/homebrew`), Xcode CLI tools, shell config (`.zshrc`)
 - **Windows**: WSL setup, PowerShell commands, path differences, winget usage
 
-### URLs to Check
-- Official documentation links
-- GitHub repository URLs
-- Tool download pages
-- API reference links
-
-### Version-Sensitive Claims
-- Node.js LTS version references
-- Python version requirements
-- Tool version numbers (Antigravity, Wrangler, etc.)
-
-## Official Sources
+### Official Sources
 
 | Tool | Primary source |
 |------|---------------|
@@ -51,9 +45,8 @@ Fact verification for Desktop Vibe Guide docs.
 ## Invocation
 
 **Single doc:** `/doc-research setup.md`
-
 **All docs:** `/doc-research`
 
 ## Output
 
-Write report to `editorial-workspace/research/research-YYYY-MM-DD.md`, append to `editorial-workspace/changelog.jsonl`, present findings inline: Outdated → Broken URLs → Unverifiable.
+Write report to `editorial-workspace/research/research-YYYY-MM-DD.md`, append to `editorial-workspace/changelog.jsonl`. Present candidates first (grouped by risk), then findings after verification. Ask before making any edits.

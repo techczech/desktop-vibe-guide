@@ -1,18 +1,21 @@
 ---
-description: Review documentation for voice, tone, and style consistency. Checks against the project voice guide, doc templates, readability, progressive disclosure, and jargon handling. Invoke with /doc-review.
+description: >
+  Review documentation for voice, tone, and style. Checks against the project voice guide,
+  then evolves the guide based on user feedback (accept/reject/rank). The voice guide is a
+  living document that improves with each review. Invoke with /doc-review.
 ---
 
 # /doc-review
 
-Voice, tone, and style reviewer for Desktop Vibe Guide docs.
+Voice, tone, and style reviewer for Desktop Vibe Guide. The voice guide evolves from your feedback.
 
-## Quick Start
+## How to Run
 
 1. Read the generic workflow: `editorial-workspace/core/references/review-workflow.md`
 2. Read the voice guide: `editorial-workspace/guides/voice-and-tone.md`
 3. Read doc templates: `editorial-workspace/guides/doc-templates.md`
 4. Read project config: `editorial-workspace/editorial-config.json`
-5. Follow the workflow steps with the project-specific context below
+5. Scan doc(s), present findings, ask for accept/reject/rank, then update the voice guide
 
 ## Project Voice Summary
 
@@ -39,12 +42,22 @@ Voice, tone, and style reviewer for Desktop Vibe Guide docs.
 - Missing "Try:" blocks in Template A docs
 - Re-explanations of concepts that have a canonical doc (violates single-source)
 
+## Feedback Loop
+
+After presenting findings:
+1. Ask user to **accept** or **reject** each finding
+2. Ask which **categories** of issues matter most
+3. **Update the voice guide** based on decisions:
+   - Rejected findings → add exceptions or clarifications to the guide
+   - Accepted patterns not yet in guide → add them
+   - Category rankings → reorder priorities in the guide
+   - Add a dated note summarizing what was learned
+
 ## Invocation
 
 **Single doc:** `/doc-review setup.md`
-
 **All docs:** `/doc-review`
 
 ## Output
 
-Write report to `editorial-workspace/audit-reports/review-YYYY-MM-DD.md`, append to `editorial-workspace/changelog.jsonl`, present suggestions inline grouped by: Critical tone issues → Structural gaps → Polish.
+Write report to `editorial-workspace/audit-reports/review-YYYY-MM-DD.md`, update `editorial-workspace/guides/voice-and-tone.md` based on feedback, append to `editorial-workspace/changelog.jsonl`. Present suggestions grouped by: Critical tone issues → Structural gaps → Polish.

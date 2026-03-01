@@ -1,52 +1,61 @@
 ---
-description: Audit documentation for structural compliance. Run on a single doc or all docs in docs/. Use when checking frontmatter, heading structure, section separators, required sections, link integrity, or footer format. Invoke with /doc-audit.
+description: >
+  Audit documentation across five dimensions: structural compliance, content completeness,
+  cross-doc consistency, navigation/discoverability, and audience fit. Proposes findings
+  and asks before fixing. Invoke with /doc-audit.
 ---
 
 # /doc-audit
 
-Structural compliance checker for Desktop Vibe Guide docs.
+Exploratory documentation audit for Desktop Vibe Guide.
 
-## Quick Start
+## How to Run
 
 1. Read the generic workflow: `editorial-workspace/core/references/audit-workflow.md`
 2. Read project rules: `editorial-workspace/rules/structural-rules.md`
 3. Read project config: `editorial-workspace/editorial-config.json`
-4. Follow the workflow steps with the project-specific checks below
+4. Scan target doc(s) across all five dimensions, then present findings and ask which to fix
 
-## Project-Specific Checks
+## Project Context
 
-These checks supplement the generic audit workflow with this project's conventions.
+**Audience**: Researchers, academics, and non-developers.
+**Docs location**: `docs/`
+**19 docs** across 6 categories (see `editorial-config.json` for details).
 
-### Frontmatter (from editorial-config.json)
+### Structural Rules (from rules/structural-rules.md)
 
-Required fields: `title`, `status`, `updated`, `template`, `category`
+- YAML frontmatter required (title, status, updated, template, category)
+- H1 title with trailing emoji
+- `---` between H2 sections
+- `## Next Steps` section (3-4 links), except about.md
+- Footer: `---\n\n*Last updated: YYYY-MM-DD*`
+- `> **Try:** *"prompt text"*` format for interactive prompts
+- Relative markdown links: `[Display Text](filename.md)`
 
-Allowed `status` values: `draft`, `review`, `published`
+### Cross-Doc Consistency
 
-Allowed `template` values: `A`, `B`, `C`, `D`
+Known patterns to check:
+- Single-source-of-truth: each concept has ONE canonical doc (see glossary `first_defined_in`)
+- Director metaphor should be consistent across all docs that use it
+- Platform flags (macOS/Windows) should use consistent format
 
-### Structure
+### Navigation
 
-1. **Emoji H1** — First heading must be `# Title 🎯` (H1 with trailing emoji)
-2. **HR separators** — `---` between every H2 section
-3. **Next Steps section** — Every doc must have `## Next Steps` with 3-4 links. Exception: `about.md`
-4. **Footer** — Last lines must be `---\n\n*Last updated: YYYY-MM-DD*`
-5. **Try: blocks** — Interactive prompts must use: `> **Try:** *"prompt text"*`
+- Next Steps should form coherent paths through the 6 categories
+- Reference docs (Template C) should be well-linked from narrative docs
+- about.md is the only doc exempt from Next Steps
 
-### Links
+### Audience Fit
 
-- Internal cross-references use relative markdown links: `[Display Text](filename.md)`
-- Every `[text](file.md)` must point to an existing file in `docs/`
-- External URLs must be well-formed
+- Target audience is smart but not technical
+- Docs should explain developer concepts without assuming familiarity
+- Examples should relate to research/academic workflows where possible
 
 ## Invocation
 
 **Single doc:** `/doc-audit setup.md`
-
-**All docs:** `/doc-audit` (no argument = scan all docs in `docs/`)
+**All docs:** `/doc-audit`
 
 ## Output
 
-Write report to `editorial-workspace/audit-reports/audit-YYYY-MM-DD.md`, append to `editorial-workspace/changelog.jsonl`, and present findings inline sorted by severity: Critical → Warning → Suggestion.
-
-After presenting findings, ask the user which to fix. Do not auto-fix.
+Write report to `editorial-workspace/audit-reports/audit-YYYY-MM-DD.md`, append to `editorial-workspace/changelog.jsonl`, present findings grouped by dimension and sorted by severity. Ask which to fix.

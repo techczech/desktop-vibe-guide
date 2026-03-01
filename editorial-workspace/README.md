@@ -2,7 +2,7 @@
 
 This folder is the editorial quality system for the Desktop Vibe Guide — a documentation project with 19 markdown docs aimed at researchers, academics, and non-developers learning to use AI desktop agents.
 
-Your AI agent uses the files here to check docs for structural issues, terminology consistency, voice and tone, and factual accuracy. The generic editorial patterns come from the [doc-editorial-skill](core/README.md) (linked in `core/`). This project's specific rules, glossary, and conventions live here.
+Your AI agent uses the files here to check docs for structural issues, discover terminology patterns, review voice and tone, and verify factual accuracy. Every workflow is interactive: it proposes findings and asks before acting. The generic editorial patterns come from the [doc-editorial-skill](core/SKILL.md) (linked in `core/`). This project's specific rules, glossary, and conventions live here.
 
 ## Commands You Can Use
 
@@ -10,19 +10,20 @@ Tell your agent any of these, or describe what you want in plain language:
 
 | Command | What it does |
 |---------|-------------|
-| `/doc-audit` | Checks structural rules — emoji H1, `---` separators, `## Next Steps`, footer, frontmatter, links |
-| `/doc-terms` | Checks 18 canonical terms (Antigravity, vibecoding, GitHub, etc.) for consistent spelling |
-| `/doc-review` | Reviews voice and tone against the project's conversational, encouraging style |
-| `/doc-research` | Verifies tool instructions (Antigravity, Homebrew, Cloudflare, etc.) are still accurate |
-| `/doc-pipeline` | Runs all 4 checks at once using parallel reviewer bots |
+| `/doc-audit` | Audits docs across 5 dimensions: structure, completeness, consistency, navigation, audience fit |
+| `/doc-terms` | Discovers candidate terms and checks terminology consistency against the glossary |
+| `/doc-review` | Reviews voice and tone — evolves the voice guide based on your feedback |
+| `/doc-research` | Two-step fact verification: identifies checkable claims, then verifies what you select |
 | `/doc-changelog` | Logs what changed to `changelog.jsonl` |
 | `/doc-capture` | Captures decisions and learnings at the end of a session |
-| `/doc-learning-paths` | Generates reading sequences for 5 audience personas |
+| `/doc-learning-paths` | Proposes reader personas and generates reading sequences |
+| `/doc-init` | Guided walkthrough for setting up a new editorial workspace |
 
 Examples of what you might say:
-- "Audit all my docs for structural issues"
-- "Is the terminology consistent across the getting started docs?"
-- "Check if the Homebrew and Cloudflare instructions are still correct"
+- "Audit all my docs for issues"
+- "Find terms that should be in the glossary"
+- "Review the voice in setup.md and help me refine the voice guide"
+- "What claims in the setup doc should we fact-check?"
 - "Log the edits I just made"
 - "What should a brand new reader look at first?"
 
@@ -30,15 +31,18 @@ Examples of what you might say:
 
 | File / Folder | What it is | When to edit |
 |--------------|-----------|-------------|
-| `glossary.json` | 18 canonical terms with definitions and spelling rules | When adding new concepts or changing terminology |
-| `editorial-config.json` | Structural checks: emoji H1, `---` separators, Next Steps, footer | When adding or removing structural rules |
+| `glossary.json` | Canonical terms with definitions and spelling rules | When adding new concepts or changing terminology |
+| `editorial-config.json` | Project settings, paths, and frontmatter rules | When changing project structure or settings |
 | `rules/structural-rules.md` | This project's conventions in plain English | When conventions change |
-| `changelog.jsonl` | Automatic log of all editorial actions | Don't edit — the agent appends to it |
-| `skills/` | 8 skill files — one per `/doc-*` command | When customizing a workflow |
-| `agents/` | 4 reviewer bots (structure, style, cross-refs, facts) | When you want different review specializations |
+| `guides/voice-and-tone.md` | Voice guide — evolves from `/doc-review` feedback | Updated automatically during reviews |
+| `guides/doc-templates.md` | Template patterns (A/B/C/D) | When changing template structures |
+| `guides/lessons-learned.md` | Accumulated editorial learnings | Updated by `/doc-capture` |
+| `changelog.jsonl` | Log of all editorial actions | Don't edit — the agent appends to it |
+| `skills/` | Skill files — one per `/doc-*` command | When customizing a workflow |
+| `agents/` | Specialist reviewer instructions (structure, style, cross-refs, facts) | When you want different review specializations |
 | `audit-reports/` | Output from audits and reviews (gitignored) | Read and delete as needed |
 | `research/` | Working files from fact-checking (gitignored) | Same — read and delete as needed |
-| `core/` | Shortcut to the shared skill repo | Don't edit through here — edit the core repo directly |
+| `core/` | Symlink to the shared skill repo | Don't edit through here — edit the skill repo directly |
 
 ## This Project's Specifics
 
@@ -46,34 +50,19 @@ Examples of what you might say:
 
 **4 doc templates**: A (start — zero-knowledge entry points), B (core — assumes experience), C (reference — scannable lookup), D (meta — about page).
 
-**18 glossary terms** covering tools (Antigravity, Git, GitHub, Homebrew, Cloudflare Pages, Gemini API, AI Studio), concepts (vibecoding, agent, prompt, context, localhost, director metaphor, Planning Mode, permissions), platforms (WSL), and formats (Markdown).
-
-**Known issues** (from `rules/structural-rules.md`):
-- 3 docs missing `## Next Steps`: setup.md, permissions-and-approvals.md, planning-mode.md
-- `why-desktop-agents.md` uses `## Getting Started` instead of `## Next Steps`
-- Try: block formatting varies across docs
-- `file-formats.md` and `markdown-for-writers.md` have markdown overlap
-- `git-github-basics.md` missing some `---` separators
+**Audience**: Researchers, academics, and non-developers. Smart but not technical.
 
 ## Documentation Authoring Guides
 
-Detailed guidance for writing and structuring docs lives in `guides/`:
-
-| You need to...                           | Read                            |
-|------------------------------------------|---------------------------------|
-| Write or rewrite a doc's content         | `guides/voice-and-tone.md` — conversational, encouraging, never condescending, explain jargon on first use |
-| Create a new doc or restructure one      | `guides/doc-templates.md` — structural patterns for each template type (A/B/C/D) |
-| Understand what's gone wrong before      | `guides/lessons-learned.md` — known issues and historical decisions |
-| Decide where a reference doc fits        | `guides/reference-section-taxonomy.md` — how reference docs relate and should be organized |
-
-**Audience reminder**: The Desktop Vibe Guide is for researchers, academics, and non-developers. They are smart but not technical.
-
-The editorial skills reference these guides as source data — the connection is configured in `editorial-config.json` under `paths`.
+| You need to... | Read |
+|----------------|------|
+| Write or rewrite a doc's content | `guides/voice-and-tone.md` |
+| Create a new doc or restructure one | `guides/doc-templates.md` |
+| Understand what's gone wrong before | `guides/lessons-learned.md` |
+| Decide where a reference doc fits | `guides/reference-section-taxonomy.md` |
 
 ## How It All Connects
 
-Your local files (glossary, rules, config) define **what** to check. The generic workflows in `core/` define **how** to check. Your skills in `skills/` combine both — they tell the agent "follow this workflow, applying these rules."
+Your local files (glossary, rules, config, voice guide) define **what** to check. The generic workflows in `core/references/` define **how** to check. Your skills in `skills/` combine both.
 
-Shortcuts in `.claude/skills/` and `.claude/agents/` let Claude Code find everything. Other agents (Antigravity, Codex) are configured through their own instruction files.
-
-For the full explanation of how core and local relate, see the [doc-editorial-skill README](core/README.md).
+Skills are copied into `.claude/skills/` for Claude Code discovery. Other agents (Antigravity, Codex) are configured through their own instruction files — see `core/scripts/setup-agents.sh`.
