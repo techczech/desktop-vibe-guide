@@ -45,9 +45,13 @@ pnpm run build        # Build for production (output: dist/)
 3. If adding a new doc, also add an entry to the `allDocs` array in `App.jsx`
 4. Rebuild and redeploy
 
+### Writing scope
+
+Make only requested changes; preserve all other wording and structure. Templates, reviewers and house style do not authorise extra explanations, qualifications or sections. An explicit fix request authorises those fixes; review alone does not authorise applying suggestions.
+
 ### Document Conventions
 
-All markdown docs must follow these patterns:
+For new documents and explicitly requested whole-document authoring, use these conventions. Do not retrofit them during a narrow edit:
 - **H1 title with emoji**: `# Title Here 🎯`
 - **Horizontal rules**: Use `---` between major sections
 - **Next Steps section**: Every doc (except about.md) ends with `## Next Steps` containing 3-4 relevant links
@@ -84,7 +88,7 @@ Interactive documentation quality workflows managed by the editorial system in `
 | `/doc-learning-paths` | Proposes reader personas and generates reading sequences |
 | `/doc-init` | Guided walkthrough for setting up a new editorial workspace |
 
-See `editorial-workspace/README.md` for full details on the editorial system, its files, and how it connects to the shared `doc-editorial-skill` repo (linked via `editorial-workspace/core/`).
+See `editorial-workspace/README.md` for full details on the editorial system, its files, and the optional local editorial integration. Tool locations are excluded from this public repository.
 
 ### Document Categories (in App.jsx)
 

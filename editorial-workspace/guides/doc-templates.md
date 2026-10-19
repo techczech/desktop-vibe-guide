@@ -1,5 +1,7 @@
 # Document Structure Templates
 
+The current request controls scope. These conventions guide requested authoring, not automatic rewrites or extra context, caveats, examples or sections. Preserve author wording outside the request.
+
 ## Choosing a Template
 
 | Category    | When to use                                 | Template | Exemplar doc              |

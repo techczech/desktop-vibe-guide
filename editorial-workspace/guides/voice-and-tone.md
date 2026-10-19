@@ -1,5 +1,7 @@
 # Voice and Tone Guide
 
+The current request controls scope. These conventions guide requested authoring, not automatic rewrites or extra context, caveats, examples or sections. Preserve author wording outside the request.
+
 ## The Core Voice
 
 The Desktop Vibe Guide speaks as a knowledgeable friend who has been through the learning curve and is now helping someone else through it. Not an instructor lecturing from above. Not a peer who is equally lost. A person who has figured it out and wants to share the shortcuts.

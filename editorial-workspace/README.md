@@ -2,7 +2,7 @@
 
 This folder is the editorial quality system for the Desktop Vibe Guide — a documentation project with 19 markdown docs aimed at researchers, academics, and non-developers learning to use AI desktop agents.
 
-Your AI agent uses the files here to check docs for structural issues, discover terminology patterns, review voice and tone, and verify factual accuracy. Every workflow is interactive: it proposes findings and asks before acting. The generic editorial patterns come from the [doc-editorial-skill](core/SKILL.md) (linked in `core/`). This project's specific rules, glossary, and conventions live here.
+Your AI agent uses the files here to check docs for structural issues, discover terminology patterns, review voice and tone, and verify factual accuracy. Every workflow is interactive: it proposes findings and asks before acting. Generic editorial workflows may be supplied by an independently installed editorial tool. Tool locations and local integration links are not distributed with this repository. This project's specific rules, glossary, and conventions live here.
 
 ## Commands You Can Use
 
@@ -42,7 +42,7 @@ Examples of what you might say:
 | `agents/` | Specialist reviewer instructions (structure, style, cross-refs, facts) | When you want different review specializations |
 | `audit-reports/` | Output from audits and reviews (gitignored) | Read and delete as needed |
 | `research/` | Working files from fact-checking (gitignored) | Same — read and delete as needed |
-| `core/` | Symlink to the shared skill repo | Don't edit through here — edit the skill repo directly |
+| `core/` | Optional, ignored local editorial integration | Configure locally; do not commit tool paths |
 
 ## This Project's Specifics
 
@@ -63,6 +63,6 @@ Examples of what you might say:
 
 ## How It All Connects
 
-Your local files (glossary, rules, config, voice guide) define **what** to check. The generic workflows in `core/references/` define **how** to check. Your skills in `skills/` combine both.
+The project files (glossary, rules, config and voice guide) define **what** to check. An installed editorial tool may supply the review workflow. Follow the requested scope; a workflow does not authorise additional changes.
 
-Skills are copied into `.claude/skills/` for Claude Code discovery. Other agents (Antigravity, Codex) are configured through their own instruction files — see `core/scripts/setup-agents.sh`.
+Use the editorial commands installed for your agent. Local tool setup is separate from this public documentation repository.

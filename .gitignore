@@ -39,3 +39,6 @@ editorial-workspace/research/*
 # Logs
 logs
 *.log
+
+# Optional machine-local editorial integration.
+/editorial-workspace/core
